@@ -1,3 +1,3 @@
-# uri.semic.eu-thema
+# data4wallonia-thema
 
 add text
