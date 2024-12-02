@@ -32,9 +32,73 @@
     }
 },
 {
+  "name": "d4wmo-ap-asis",
+  "type": "ap",
+  "eap": "Data4WalloniaModel-AsIs.eap",
+  "diagram": "Model",
+  "template": "d4wmo-asis-ap_en.j2",
+  "title": "Data4Wallonia Model Application Profile (D4WMO-AP) AsIs",
+  "publication-state": "Draft",
+  "publication-date": "2024-09-04",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "D4WTA-AP",
+  "site": "site-skeleton/d4wmo-asis-ap",
+  "repourl": "https://github.com/DigitalWallonia/D4WMO-AP-AsIs/tree/master/releases/1.0.0",
+  "versionurl": "https://github.com/DigitalWallonia/D4WMO-AP-AsIs/tree/master/releases/1.0.0",
+  "feedbackurl": "https://github.com/DigitalWallonia/D4WMO-AP-AsIs/issues",
+  "standaardregisterurl" :"https://github.com/DigitalWallonia/D4WMO-AP-AsIs/blob/master/releases/1.0.0/Changelog.md",
+    "translation": [
+      {
+        "language":"en",
+        "template":"d4wmo-asis-ap_en.j2",
+        "title": "Data4Wallonia Model Application Profile (D4WMO-AP) AsIs",
+        "translationjson":"d4wmo-asis-ap_en.json",
+        "mergefile":"d4wmo-asis-ap_en_merged.jsonld"
+      }
+    ],
+    "toolchainversion" : "3",
+    "documentconfig": {
+          "statuslabel" : "Draft",
+          "editorDocumentroot" : "https://DigitalWallonia.github.io/data4wallonia-generated/D4WMO-AP-AsIs/releases/1.0.0"
+    }
+},
+{
+  "name": "d4wmo-generic",
+  "type": "ap",
+  "eap": "Data4WalloniaModel-Generic.eap",
+  "diagram": "Model",
+  "template": "d4wmo-generic_en.j2",
+  "title": "Data4Wallonia Generic Model",
+  "publication-state": "Draft",
+  "publication-date": "2024-09-04",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "D4WTA-AP",
+  "site": "site-skeleton/d4wmo-generic",
+  "repourl": "https://github.com/DigitalWallonia/D4WMO-Generic/tree/master/releases/1.0.0",
+  "versionurl": "https://github.com/DigitalWallonia/D4WMO-Generic/tree/master/releases/1.0.0",
+  "feedbackurl": "https://github.com/DigitalWallonia/D4WMO-Generic/issues",
+  "standaardregisterurl" :"https://github.com/DigitalWallonia/D4WMO-Generic/blob/master/releases/1.0.0/Changelog.md",
+    "translation": [
+      {
+        "language":"en",
+        "template":"d4wmo-generic_en.j2",
+        "title": "Data4Wallonia Generic Model",
+        "translationjson":"d4wmo-generic_en.json",
+        "mergefile":"d4wmo-generic_en_merged.jsonld"
+      }
+    ],
+    "toolchainversion" : "3",
+    "documentconfig": {
+          "statuslabel" : "Draft",
+          "editorDocumentroot" : "https://DigitalWallonia.github.io/data4wallonia-generated/D4WMO-Generic/releases/1.0.0"
+    }
+},
+{
   "name": "d4wmo-ap",
   "type": "ap",
-  "eap": "Data4WalloniaModel.eap",
+  "eap": "Data4WalloniaModel-Profile.eap",
   "diagram": "Model",
   "template": "d4wmo-ap_en.j2",
   "title": "Data4Wallonia Model Application Profile (D4WMO-AP)",
