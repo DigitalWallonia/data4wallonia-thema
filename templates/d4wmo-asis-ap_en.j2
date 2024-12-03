@@ -102,8 +102,7 @@ This specification uses the following prefixes to shorten the URIs for readabili
         <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
             <tbody>
-            <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
-			<tr><td><code>euvoc</code></td><td><code>http://publications.europa.eu/ontology/euvoc#</code></td></tr>
+            <tr><td><code>d4w</code></td><td><code>http://data4wallonia.com/model/</code></td></tr>
 			<tr><td><code>owl</code></td><td><code>http://www.w3.org/2002/07/owl#</code></td></tr>
 			<tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
             <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
@@ -114,14 +113,5 @@ This specification uses the following prefixes to shorten the URIs for readabili
 {% endblock %}
 
 {% block examples %}
-<div class="h3 examples" id="example-rdf_taxonomy">Example Model</div>
-{% endblock %}
-
-{% block additionalconstraints %}
-Additional shapes can be found: 
-<ul>
-<li><a href="./html/additional-shapes/skos-shapes.ttl">skos-shapes.ttl</a> for generic skos validation (conceptscheme disjoint from concept, unique labels per language) </li>
-<li><a href="./html/additional-shapes/skos-best-practices-shapes.ttl">skos-best-practices-shapes.ttl</a> to apply best practices (no empty or overlapping labels)</li>
-<li><a href="./html/additional-shapes/skos-d4w-shapes.ttl">skos-d4w-shapes.ttl</a> to apply requirements for Data4Wallonia (labels at least in French and optional in English)</li>
-</ul>
+<div class="h3 examples" id="example-rdf_model">Example Model</div>
 {% endblock %}
