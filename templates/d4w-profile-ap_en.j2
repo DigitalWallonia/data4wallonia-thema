@@ -332,10 +332,17 @@
 			      {%- if class.rawTags['class-usage-scope'] == "main" %}
 			      <a href="#{{ class.label[language] | replace(" ","") | urlencode }}">{{ class.label[language] }}</a> | {%- endif %}{%- endfor %}
                         </p>
+                        <p>
+                            The main entities are supported by:
+                            <br />
+                            | {%- for class in classes |sort(attribute=sortattr) %} 
+			      {%- if class.rawTags['class-usage-scope'] != "main" %}
+			      <a href="#{{ class.label[language] | replace(" ","") | urlencode }}">{{ class.label[language] }}</a> | {%- endif %}{%- endfor %}
+                        </p>
                 {% endif %}
                 {% if ( ( datatypes | length ) > 0 ) %}
                         <p>
-                            The main entities are supported by these datatypes:
+                            And supported by these datatypes:
                             <br />
                             | {%- for datatype in datatypes |sort(attribute=sortattr) %} <a href="#{{ datatype.label[language] | replace(" ","") | urlencode }}">{{ datatype.label[language] }}</a> | {%- endfor %}
                         </p>
@@ -520,6 +527,22 @@ The main entities are those that form the core of the Application Profile.
 {% endfor %}
 </section>
 
+<section>
+<h2>
+   Supportive Entities
+</h2>
+The supportive entities are supporting the main entities in the Application Profile. 
+They are included in the Application Profile because they form the range of properties.
+
+
+{% for entity in classes | sort(attribute=sortattr) %}
+{% if entity.rawTags['class-usage-scope'] != "main"   %}
+   {{ renderentity(entity) }}
+{% endif %}
+{% endfor %}
+
+</section>
+
     <section>
         <h2>
             Datatypes
@@ -622,21 +645,16 @@ The main entities are those that form the core of the Application Profile.
 {% block usages %}
 <section class="informative">
 	<h2>Usage Guidelines</h2>
-    {% include "d4w-CV-governance.j2" ignore missing %}
-    {% include "d4w-AP-implementation.j2" ignore missing %}
+    {% include "AP-implementation.j2" ignore missing %}
+    {% include "CV-governance.j2" ignore missing %}
 </section>
 {% endblock %} 
-
-<section class="informative">
-    <h2> Additional constraints </h2>
-        {% block additionalconstraints %}
-	<p> No additionalconstraints defined </p>
-        {% endblock %}
-</section>
 
 {% block mappings %}
 
 {% endblock %} 
+
+
 
 <section id="quick-reference" class="appendix">
 
@@ -742,12 +760,38 @@ Past and current contributors are :
 
 
 	    var prefixes = [ 
+{'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
+{'pref':'d4w:', 'ns': 'http://data4wallonia.com/model/'},
+{'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
+{'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
 {'pref':'dct:', 'ns': 'http://purl.org/dc/terms/'},
-{'pref':'euvoc', 'ns': 'http://publications.europa.eu/ontology/euvoc'},
+{'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
+{'pref':'cpsv:', 'ns': 'http://purl.org/vocab/cpsv#'},
+{'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
+{'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
+{'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
 {'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
+{'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
 {'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
+{'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
 {'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
-{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'}
+{'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
+{'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
+{'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
+{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
+{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'},
+{'pref':'ad:', 'ns': 'http://inspire.ec.europa.eu/ont/ad#'},
+{'pref':'cv:', 'ns': 'http://data.europa.eu/m8g/'},
+{'pref':'geo:', 'ns': 'http://www.opengis.net/ont/geosparql#'},
+{'pref':'schema:', 'ns': 'https://schema.org/'},
+{'pref':'org:', 'ns': 'http://www.w3.org/ns/org#'},
+{'pref':'person:', 'ns': 'http://www.w3.org/ns/person#'},
+{'pref':'legal:', 'ns': 'http://www.w3.org/ns/legal#'},
+{'pref':'atu:', 'ns': 'http://data.europa.eu/88u/dataset/'},
+{'pref':'xhv:', 'ns': 'http://www.w3.org/1999/xhtml/vocab#'},
+{'pref':'epo:', 'ns': 'http://data.europa.eu/a4g/ontology#'},
+
+
 				];
 
 	    function shorturl (url) {
