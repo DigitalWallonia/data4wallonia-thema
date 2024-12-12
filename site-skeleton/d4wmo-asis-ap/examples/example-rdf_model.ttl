@@ -1,31 +1,14 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
-@prefix status: <http://publications.europa.eu/resource/authority/concept-status/> .
+@prefix d4w: <http://data4wallonia.com/model/> .
 @prefix ex: <http://example.com/> .
 
-ex:data_4_wallonia dcterms:identifier "data_4_wallonia" ;
-	skos:prefLabel "Data 4 Wallonia"@en ;
-	dcterms:created "2024-09-02"^^xsd:date ;
-	owl:versionInfo "1.0.0" ;
-	skos:hasTopConcept ex:eco-materiaux ;
-	a skos:ConceptScheme .
-
-ex:eco-materiaux skos:prefLabel "Eco-Matériaux"@fr ;
-	skos:definition "Matériaux respectueux de l'environnement"@fr ;
-	owl:versionInfo "1.0.0" ;
-	euvoc:status status:CURRENT ;
-	skos:inScheme ex:data_4_wallonia ;
-	skos:topConceptOf ex:data_4_wallonia ;
-	a skos:Concept .
-
-ex:elements_structurels skos:prefLabel "Eléments structurels"@fr ;
-	skos:definition "Matériaux pour constructions"@fr ;
-	owl:versionInfo "1.0.0" ;
-	euvoc:status status:CURRENT ;
-	skos:broader ex:eco-materiaux ;
-	skos:inScheme ex:data_4_wallonia ;
-	a skos:Concept .
+ex:person d4w:alternativeName "Magritte" ;
+	d4w:displayRefusal 0 ;
+	d4w:lastName "Magritte" ;
+	d4w:firstName "René François Ghislain" ;
+	d4w:language "French" ;
+	d4w:slug "123" ;
+	a d4w:Person .
