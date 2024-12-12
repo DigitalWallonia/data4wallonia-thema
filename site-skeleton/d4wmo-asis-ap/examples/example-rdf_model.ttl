@@ -1,9 +1,9 @@
+@prefix d4w: <http://data4wallonia.com/model/> .
+@prefix ex: <http://example.com/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix d4w: <http://data4wallonia.com/model/> .
-@prefix ex: <http://example.com/> .
 
 ex:person d4w:internalName "Magritte" ;
 	d4w:displayRefusal "0"^^xsd:boolean ;
