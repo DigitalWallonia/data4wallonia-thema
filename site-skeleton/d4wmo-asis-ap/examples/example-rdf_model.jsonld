@@ -1,84 +1,25 @@
 {
   "@context": [
-  "https://emidiostani.github.io/data4wallonia-generated/D4WTA-AP/releases/1.0.0/context/d4wta-ap.jsonld",
-   {
-    "dct": "http://purl.org/dc/terms/",
-	"euvoc": "http://publications.europa.eu/ontology/euvoc#",
-	"status" : "http://publications.europa.eu/resource/authority/concept-status/",
-    "ex": "http://example.com/",
-	"owl": "http://www.w3.org/2002/07/owl#",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-   }
-  ],
+  "https://digitalwallonia.github.io/data4wallonia-generated/D4WMO-AP-ASIS/releases/1.0.0/context/d4wmo-ap-asis.jsonld",
+  {
+    "d4w" :	"http://data4wallonia.com/model/"
+    "ex"  : "http://example.com/",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos" : "http://www.w3.org/2004/02/skos/core#",
+    "xsd" : http://www.w3.org/2001/XMLSchema#"
+  }],
   "@graph": [
     {
-      "@id": "ex:data_4_wallonia",
-      "@type": "ConceptScheme",
-      "dct:identifier" : "data_4_wallonia",
-      "skos:prefLabel" : {
-          "@language": "en",
-          "@value": "Data 4 Wallonia"
-      },
-      "dct:created" : {
-        "@type": "xsd:date",
-        "@value": "2024-09-02"
-      },
-      "owl:versionInfo" : {
-        "@value": "1.0.0"
-      },
-	  "skos:hasTopConcept" : {
-		"@id" : "ex:eco-materiaux"
-	  }
-    },
-    {
-      "@id": "ex:eco-materiaux",
-      "@type": "Concept",
-      "skos:prefLabel": {
-          "@language": "fr",
-          "@value": "Eco-Matériaux"
-      },
-	  "skos:definition" : {
-	      "@language": "fr",
-          "@value": "Matériaux respectueux de l'environnement"
-	  },
-      "owl:versionInfo" : {
-        "@value": "1.0.0"
-      },
-      "euvoc:status" : {
-		"@id" : "status:CURRENT"		
-      },
-	  "skos:inScheme" :  {
-		"@id": "ex:data_4_wallonia"
-	  },
-	  "skos:topConceptOf" :  {
-		"@id": "ex:data_4_wallonia"
-	  }
-	  
-    },
-    {
-      "@id": "ex:elements_structurels",
-      "@type": "Concept",
-      "skos:prefLabel": {
-          "@language": "fr",
-          "@value": "Eléments structurels"
-      },
-	  "skos:definition" : {
-	      "@language": "fr",
-          "@value": "Matériaux pour constructions"
-	  },
-      "owl:versionInfo" : {
-        "@value": "1.0.0"
-      },
-      "euvoc:status" : {
-		"@id" : "status:CURRENT"		
-      },
-      "skos:broader" : {
-		"@id" : "ex:eco-materiaux"		
-      },
-	  "skos:inScheme" :  {
-		"@id": "ex:data_4_wallonia"
-	  }	  
-    }
-  ]
+     "@id": "ex:person",
+     "@type": "Person",
+     "d4w:alternativeName" : "Magritte",
+	 "d4w:displayRefusal" : 0,
+	 "d4w:lastName" : "Magritte",
+	 "d4w:firstName" : "René François Ghislain",
+	 "d4w:language" : "French",
+	 "d4w:slug" : "123",
+   }
+ ]
 }
+   
