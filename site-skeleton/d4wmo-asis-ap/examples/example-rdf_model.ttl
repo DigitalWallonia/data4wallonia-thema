@@ -5,8 +5,8 @@
 @prefix d4w: <http://data4wallonia.com/model/> .
 @prefix ex: <http://example.com/> .
 
-ex:person d4w:alternativeName "Magritte" ;
-	d4w:displayRefusal 0 ;
+ex:person d4w:internalName "Magritte" ;
+	d4w:displayRefusal "0"^^xsd:boolean ;
 	d4w:lastName "Magritte" ;
 	d4w:firstName "René François Ghislain" ;
 	d4w:language "French" ;

@@ -13,8 +13,11 @@
     {
      "@id": "ex:person",
      "@type": "Person",
-     "d4w:alternativeName" : "Magritte",
-	 "d4w:displayRefusal" : 0,
+     "d4w:internalName" : "Magritte",
+	 "d4w:displayRefusal" : {
+        "@type": "xsd:boolean",
+        "@value": "0"
+      },
 	 "d4w:lastName" : "Magritte",
 	 "d4w:firstName" : "René François Ghislain",
 	 "d4w:language" : "French",
