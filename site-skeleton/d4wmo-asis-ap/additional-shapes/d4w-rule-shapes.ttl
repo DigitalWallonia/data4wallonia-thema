@@ -26,7 +26,7 @@ d4w:
   sh:sparql [
     sh:prefixes d4w: ;
     rdfs:comment "slug should be unique among instances of the same class"@en ;
-    sh:message "[D4W-R1] - slug should be unique among the same class instances (there is concept '{$this}' with the same slug '{$pl}' of concept '{$other}')."@en ;
+    sh:message "[D4W-R1] - slug should be unique among the instances of the same class (there is concept '{$this}' with the same slug '{$pl}' of concept '{$other}')."@en ;
     sh:select """
     SELECT $this ?other $pl
     WHERE {
