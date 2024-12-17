@@ -13,14 +13,25 @@ ex:ActionPlan2 a d4w:ActionPlan ;
 ex:ActionPlan3 a d4w:ActionPlan ;
   d4w:slug "456" .
 
-ex:Profile1
-    a d4w:Profile ;
+ex:Profile1 a d4w:Profile ;
     d4w:slug "123" .
 
-ex:Profile2
-    a d4w:Profile ;
+ex:Profile2 a d4w:Profile ;
     d4w:slug "123" .
 
-ex:Profile3
-    a d4w:Profile ;
+ex:Profile3 a d4w:Profile ;
     d4w:slug "789" .
+
+ex:Person1 a d4w:Person ;
+    d4w:featuredEmail "person@d4w.com" .
+
+ex:Person2 a d4w:Person ;
+    d4w:featuredEmail "person@d4w.com" .
+	
+ex:Person3 a d4w:Person ;
+    d4w:nonFeaturedEmail "person2@d4w.com" .
+
+ex:Person4 a d4w:Person ;
+    d4w:nonFeaturedEmail "person2@d4w.com" .
+
+ex:Person5 a d4w:Person .
