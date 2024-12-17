@@ -35,3 +35,12 @@ ex:Person4 a d4w:Person ;
     d4w:nonFeaturedEmail "person2@d4w.com" .
 
 ex:Person5 a d4w:Person .
+
+ex:QualifiedPerson1 a d4w:QualifiedPerson ;
+    d4w:emailAddress "qualifiedperson@d4w.com" .
+	
+ex:QualifiedPerson2 a d4w:QualifiedPerson ;
+    d4w:emailAddress "qualifiedperson@d4w.com" .
+
+ex:QualifiedPerson3 a d4w:QualifiedPerson ;
+    d4w:emailAddress "qualifiedperson3@d4w.com" 

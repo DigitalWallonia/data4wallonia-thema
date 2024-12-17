@@ -107,3 +107,28 @@ d4w:
 	]
   ) .
 
+:D4W-QualifiedPerson a sh:NodeShape ;
+  sh:targetClass d4w:QualifiedPerson ;
+  rdfs:label "A list of checks on the QualifiedPerson class"@en ;
+  rdfs:comment "A list of checks on the QualifiedPerson class"@en ;
+  sh:property :D4W-Email-Unique .
+
+:D4W-Email-Unique a sh:PropertyShape ;
+  sh:name "Email should be unique among instances of the same class"@en ;
+  sh:description "Email should be unique among instances of the same class"@en ;
+  sh:severity sh:Violation ;
+  sh:path d4w:emailAddress ;
+  sh:sparql [
+    sh:prefixes d4w: ;
+    rdfs:comment "Email should be unique among instances of the same class"@en ;
+    sh:message "[D4W.MO.R6] - Email should be unique among the instances of the same class (there is concept '{$this}' with the same slug '{$pl}' of concept '{$other}')."@en ;
+    sh:select """
+    SELECT $this ?other $pl
+    WHERE {
+      ?this  d4w:emailAddress ?pl .
+      ?other d4w:emailAddress ?opl .
+      ?this a ?thisClass .
+      ?other a ?otherClass .
+      FILTER ($this != ?other && ?thisClass = ?otherClass && ?pl = ?opl)
+    }""" ;
+  ] .
