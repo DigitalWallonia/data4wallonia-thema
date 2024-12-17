@@ -51,14 +51,14 @@ d4w:
   sh:property :D4W-FeaturedEmail-Unique, :D4W-NonFeaturedEmail-Unique .
   
 :D4W-FeaturedEmail-Unique a sh:PropertyShape ;
-  sh:name "Featured email should be unique among instances of the same class"@en ;
-  sh:description "Featured email should be unique among instances of the same class"@en ;
+  sh:name "Featured email should be unique among instances of the same class Person"@en ;
+  sh:description "Featured email should be unique among instances of the same class Person"@en ;
   sh:severity sh:Violation ;
   sh:path d4w:featuredEmail ;
   sh:sparql [
     sh:prefixes d4w: ;
-    rdfs:comment "Featured email should be unique among instances of the same class"@en ;
-    sh:message "[D4W.MO.R2] - Featured email should be unique among the instances of the same class (there is concept '{$this}' with the same featuredEmail '{$pl}' of concept '{$other}')."@en ;
+    rdfs:comment "Featured email should be unique among instances of the same class Person"@en ;
+    sh:message "[D4W.MO.R2] - Featured email should be unique among the instances of the same class Person (there is concept '{$this}' with the same featuredEmail '{$pl}' of concept '{$other}')."@en ;
     sh:select """
     SELECT $this ?other $pl
     WHERE {
@@ -71,14 +71,14 @@ d4w:
   ] .
   
 :D4W-NonFeaturedEmail-Unique a sh:PropertyShape ;
-  sh:name "Non featured email should be unique among instances of the same class"@en ;
-  sh:description "Non featured email should be unique among instances of the same class"@en ;
+  sh:name "Non featured email should be unique among instances of the same class Person"@en ;
+  sh:description "Non featured email should be unique among instances of the same class Person"@en ;
   sh:severity sh:Violation ;
   sh:path d4w:nonFeaturedEmail ;
   sh:sparql [
     sh:prefixes d4w: ;
-    rdfs:comment "Non featured email should be unique among instances of the same class"@en ;
-    sh:message "[D4W.MO.R3] - Non featured email should be unique among the instances of the same class (there is concept '{$this}' with the same nonFeaturedEmail '{$pl}' of concept '{$other}')."@en ;
+    rdfs:comment "Non featured email should be unique among instances of the same class Person"@en ;
+    sh:message "[D4W.MO.R3] - Non featured email should be unique among the instances of the same class Person (there is concept '{$this}' with the same nonFeaturedEmail '{$pl}' of concept '{$other}')."@en ;
     sh:select """
     SELECT $this ?other $pl
     WHERE {
@@ -114,14 +114,14 @@ d4w:
   sh:property :D4W-Email-Unique .
 
 :D4W-Email-Unique a sh:PropertyShape ;
-  sh:name "Email should be unique among instances of the same class"@en ;
-  sh:description "Email should be unique among instances of the same class"@en ;
+  sh:name "Email should be unique among instances of the same class QualifiedPerson"@en ;
+  sh:description "Email should be unique among instances of the same class QualifiedPerson"@en ;
   sh:severity sh:Violation ;
   sh:path d4w:emailAddress ;
   sh:sparql [
     sh:prefixes d4w: ;
     rdfs:comment "Email should be unique among instances of the same class"@en ;
-    sh:message "[D4W.MO.R6] - Email should be unique among the instances of the same class (there is concept '{$this}' with the same emailAddress '{$pl}' of concept '{$other}')."@en ;
+    sh:message "[D4W.MO.R5] - Email should be unique among the instances of the same class QualifiedPerson (there is concept '{$this}' with the same emailAddress '{$pl}' of concept '{$other}')."@en ;
     sh:select """
     SELECT $this ?other $pl
     WHERE {
@@ -142,7 +142,7 @@ d4w:
   sh:sparql [
     sh:prefixes d4w: ;
     rdfs:comment "A qualified person should be unique per binome of Profile and Person"@en ;
-    sh:message "[D4W.MO.R7] - A qualified person should be unique per binome of Profile and Person (there is concept '{$this}' with the same Profile '{$Profile}' and the same Person '{$Person}'of concept '{$other}')."@en ;
+    sh:message "[D4W.MO.R6] - A qualified person should be unique per binome of Profile and Person (there is concept '{$this}' with the same Profile '{$Profile}' and the same Person '{$Person}'of concept '{$other}')."@en ;
     sh:select """
     SELECT $this ?other $Profile $Person 
     WHERE {
