@@ -47,7 +47,7 @@ d4w:
 :D4W-Person a sh:NodeShape ;
   sh:targetClass d4w:Person ;
   rdfs:label "A list of checks on the Person class"@en ;
-  rdfs:comment "A list of checks on thePerson class"@en ;
+  rdfs:comment "A list of checks on the Person class"@en ;
   sh:property :D4W-FeaturedEmail-Unique, :D4W-NonFeaturedEmail-Unique .
   
 :D4W-FeaturedEmail-Unique a sh:PropertyShape ;
@@ -58,7 +58,7 @@ d4w:
   sh:sparql [
     sh:prefixes d4w: ;
     rdfs:comment "Featured email should be unique among instances of the same class"@en ;
-    sh:message "[D4W.MO.R2] - Featured email should be unique among the instances of the same class (there is concept '{$this}' with the same slug '{$pl}' of concept '{$other}')."@en ;
+    sh:message "[D4W.MO.R2] - Featured email should be unique among the instances of the same class (there is concept '{$this}' with the same featuredEmail '{$pl}' of concept '{$other}')."@en ;
     sh:select """
     SELECT $this ?other $pl
     WHERE {
@@ -78,7 +78,7 @@ d4w:
   sh:sparql [
     sh:prefixes d4w: ;
     rdfs:comment "Non featured email should be unique among instances of the same class"@en ;
-    sh:message "[D4W.MO.R3] - Non featured email should be unique among the instances of the same class (there is concept '{$this}' with the same slug '{$pl}' of concept '{$other}')."@en ;
+    sh:message "[D4W.MO.R3] - Non featured email should be unique among the instances of the same class (there is concept '{$this}' with the same nonFeaturedEmail '{$pl}' of concept '{$other}')."@en ;
     sh:select """
     SELECT $this ?other $pl
     WHERE {
@@ -121,7 +121,7 @@ d4w:
   sh:sparql [
     sh:prefixes d4w: ;
     rdfs:comment "Email should be unique among instances of the same class"@en ;
-    sh:message "[D4W.MO.R6] - Email should be unique among the instances of the same class (there is concept '{$this}' with the same slug '{$pl}' of concept '{$other}')."@en ;
+    sh:message "[D4W.MO.R6] - Email should be unique among the instances of the same class (there is concept '{$this}' with the same emailAddress '{$pl}' of concept '{$other}')."@en ;
     sh:select """
     SELECT $this ?other $pl
     WHERE {
@@ -130,5 +130,28 @@ d4w:
       ?this a ?thisClass .
       ?other a ?otherClass .
       FILTER ($this != ?other && ?thisClass = ?otherClass && ?pl = ?opl)
+    }""" ;
+  ] .
+  
+:D4W-QualifiedPerson-Unique a sh:NodeShape ;
+  sh:targetClass d4w:QualifiedPerson ;
+  rdfs:label "A qualified person should be unique per binome of Profile and Person"@en ;
+  rdfs:comment "A qualified person should be unique per binome of Profile and Person"@en ;
+  sh:message "[D4W.MO.R7] - A qualified person should be unique per binome of Profile and Person."@en ;
+  sh:severity sh:Violation ;
+  sh:sparql [
+    sh:prefixes d4w: ;
+    rdfs:comment "A qualified person should be unique per binome of Profile and Person"@en ;
+    sh:message "[D4W.MO.R7] - A qualified person should be unique per binome of Profile and Person (there is concept '{$this}' with the same Profile '{$Profile}' and the same Person '{$Person}'of concept '{$other}')."@en ;
+    sh:select """
+    SELECT $this ?other $Profile $Person 
+    WHERE {
+      ?this a ?thisClass .
+      ?other a ?otherClass .
+	  ?this d4w:hasProfile ?Profile .
+	  ?this d4w:hasPerson ?Person .
+      ?other d4w:hasProfile ?oProfile .
+	  ?other d4w:hasPerson ?oPerson .  
+      FILTER ($this != ?other && ?thisClass = ?otherClass && ?Profile = ?oProfile && ?Person = ?oPerson)
     }""" ;
   ] .

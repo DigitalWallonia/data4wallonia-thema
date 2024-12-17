@@ -43,4 +43,16 @@ ex:QualifiedPerson2 a d4w:QualifiedPerson ;
     d4w:emailAddress "qualifiedperson@d4w.com" .
 
 ex:QualifiedPerson3 a d4w:QualifiedPerson ;
-    d4w:emailAddress "qualifiedperson3@d4w.com" 
+    d4w:emailAddress "qualifiedperson3@d4w.com" .
+
+ex:QualifiedPerson4 a d4w:QualifiedPerson ;
+    d4w:hasProfile d4w:Profile1 ;
+	d4w:hasPerson d4w:Person6 .
+	
+ex:QualifiedPerson5 a d4w:QualifiedPerson ;
+    d4w:hasProfile d4w:Profile1 ;
+	d4w:hasPerson d4w:Person6 .
+
+ex:QualifiedPerson6 a d4w:QualifiedPerson ;
+    d4w:hasProfile d4w:Profile2 ;
+	d4w:hasPerson d4w:Person6 .
