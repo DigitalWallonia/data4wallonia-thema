@@ -37,7 +37,7 @@ ex:organizer-3LBb2yyZuH9kU4k4FFt5lY d4w:title "Fédération Wallonie-Bruxelles"@
     d4w:belgianEntreprise "Ministère de la Communauté française" ;
 	a d4w:Profile .
 
-ex:organizer-6npjWrscP2ULwQkMJEAHlD d4w:title "Parlement de Wallonie" ;
+ex:organizer-6npjWrscP2ULwQkMJEAHlD d4w:title "Parlement de Wallonie"@fr ;
     d4w:slug "parlement-wallonie"@fr ;
     d4w:shortDescription "Le Parlement wallon est l'assemblée législative de la Région wallonne. Il est composé de 75 députés. Les députés siègent en séances plénières et au sein de commissions dans le but d'adopter des décrets (lois régionales), de contrôler le gouvernement (interpellations et questions) et d'exprimer des positions sur des questions de société (résolutions)."@fr ;
 	d4w:website "https://www.parlement-wallonie.be/" ;

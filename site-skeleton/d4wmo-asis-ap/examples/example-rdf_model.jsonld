@@ -214,7 +214,10 @@
         "https://www.youtube.com/channel/UCUuYqgfbrMsn2Qx4TLXb_9A",
         "https://www.linkedin.com/company/parlwal"
       ],
-      "d4w:title": "Parlement de Wallonie",
+      "d4w:title": {
+        "@language": "fr",
+		"@value": "Parlement de Wallonie"
+	  },
       "d4w:website": "https://www.parlement-wallonie.be/"
     },
     {
