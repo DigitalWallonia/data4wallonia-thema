@@ -220,19 +220,6 @@
       "d4w:website": "https://www.parlement-wallonie.be/"
     },
     {
-      "@id": "ex:person-74ievn1aScz6OxdfHoU9KE",
-      "@type": "Person",
-      "d4w:displayRefusal": {
-        "@type": "xsd:boolean",
-        "@value": "0"
-      },
-      "d4w:firstName": "René François Ghislain",
-      "d4w:internalName": "René François Ghislain Magritte",
-      "d4w:language": "French",
-      "d4w:lastName": "Magritte",
-      "d4w:slug": "rene-magritte"
-    },
-    {
       "@id": "ex:qualifiedperson-467jZ0W6wU9D0mCz88uSMr",
       "@type": "QualifiedPerson",
       "d4w:emailAddress": "rene.magritte@cfb.be",
@@ -243,6 +230,20 @@
       "d4w:profile": {
         "@id": "ex:organizer-3LBb2yyZuH9kU4k4FFt5lY"
       }
+    },
+    {
+      "@id": "ex:person-74ievn1aScz6OxdfHoU9KE",
+      "@type": "Person",
+      "d4w:displayRefusal": {
+        "@type": "xsd:boolean",
+        "@value": "0"
+      },
+      "d4w:firstName": "René François Ghislain",
+      "d4w:internalName": "René François Ghislain Magritte",
+      "d4w:language": "French",
+      "d4w:featuredEmail": "rene.magritte@cfb.be",
+      "d4w:lastName": "Magritte",
+      "d4w:slug": "rene-magritte"
     },
     {
       "@id": "https://images.ctfassets.net/myqv2p4gx62v/50eBYXoMo5hWNO64efkQY2/b6ee3b87892d4d96ab46bba4df578c0c/FWB_Logo.jfif?h=250",

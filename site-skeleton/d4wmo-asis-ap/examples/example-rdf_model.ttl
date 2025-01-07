@@ -79,19 +79,20 @@ ex:organizer-6npjWrscP2ULwQkMJEAHlD d4w:plateformContactPerson ex:qualifiedperso
 	d4w:website "https://www.parlement-wallonie.be/" ;
 	a d4w:Profile .
 
-ex:person-74ievn1aScz6OxdfHoU9KE d4w:displayRefusal "0"^^xsd:boolean ;
-	d4w:firstName "René François Ghislain" ;
-	d4w:internalName "René François Ghislain Magritte" ;
-	d4w:language "French" ;
-	d4w:lastName "Magritte" ;
-	d4w:slug "rene-magritte" ;
-	a d4w:Person .
-
 ex:qualifiedperson-467jZ0W6wU9D0mCz88uSMr d4w:emailAddress "rene.magritte@cfb.be" ;
 	d4w:internalName "René François Ghislain Magritte - Fédération Wallonie-Bruxelles" ;
 	d4w:person ex:person-74ievn1aScz6OxdfHoU9KE ;
 	d4w:profile ex:organizer-3LBb2yyZuH9kU4k4FFt5lY ;
 	a d4w:QualifiedPerson .
+
+ex:person-74ievn1aScz6OxdfHoU9KE d4w:displayRefusal "0"^^xsd:boolean ;
+	d4w:firstName "René François Ghislain" ;
+	d4w:internalName "René François Ghislain Magritte" ;
+	d4w:language "French" ;
+	d4w:featuredEmail "rene.magritte@cfb.be" ;
+	d4w:lastName "Magritte" ;
+	d4w:slug "rene-magritte" ;
+	a d4w:Person .
 
 <https://images.ctfassets.net/myqv2p4gx62v/50eBYXoMo5hWNO64efkQY2/b6ee3b87892d4d96ab46bba4df578c0c/FWB_Logo.jfif?h=250> a d4w:File .
 
