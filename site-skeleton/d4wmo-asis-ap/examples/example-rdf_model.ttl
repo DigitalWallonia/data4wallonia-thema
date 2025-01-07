@@ -1,97 +1,97 @@
-@prefix d4w: <http://data4wallonia.com/model/> .
-@prefix d4wta: <http://data4wallonia.com/resource/taxonomy/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ex: <http://example.com/> .
-@prefix eurovoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix status: <http://publications.europa.eu/resource/authority/concept-status/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d4w: <http://data4wallonia.com/model/> .
+@prefix d4wta: <http://data4wallonia.com/resource/taxonomy/> .
+@prefix ex: <http://example.com/> .
+@prefix eurovoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix status: <http://publications.europa.eu/resource/authority/concept-status/> .
 
-ex:event-4CCTPChHyptq3bDJSNlYrj d4w:title "Conférence. L'intelligence artificielle et ses impacts futurs"@fr ;
-	d4w:slug "conference-l-intelligence-artificielle-et-ses-impacts-futurs"@fr ;
-	d4w:type "Event" ;
-	d4w:shortDescription "le Parlement de la Fédération Wallonie-Bruxelles organise une conférence interparlementaire en collaboration avec le Parlement de Wallonie et le Parlement de la Région de Bruxelles-Capitale. Elle sera consacrée à l’intelligence artificielle et à ses impacts futurs."@fr ;
-	d4w:additionalDescription "La conférence offrira l’opportunité d’aborder les liens qui unissent, d’une part, l’intelligence artificielle et, d’autre part, l’industrie créative et culturelle, l’enseignement, la santé et la gouvernance publique."@fr ;
-	d4w:startDate "2025-01-29T08:15:00"^^xsd:dateTime ;
-	d4w:endDate "2025-01-29T16:30:00"^^xsd:dateTime ;
-	d4w:scheduleNotSpecified "0"^^xsd:boolean ;
-	d4w:endPublicationDate "2050-01-01T00:00:00"^^xsd:dateTime ;
-	d4w:website "https://www.pfwb.be/actualites/lintelligence-artificielle-et-ses-impacts-futurs-conference" ;
-	d4w:location "Parlement de la Fédération Wallonie-Bruxelles / Communauté française, Rue de la Loi, Bruxelles, Belgique" ;
-    d4w:organizer ex:organizer-3LBb2yyZuH9kU4k4FFt5lY , ex:organizer-6npjWrscP2ULwQkMJEAHlD ;
-	d4w:category d4wta:sensibilisation-au-numerique , d4wta:intelligence-artificielle, d4wta:fwb ;
-	d4w:ambition ex:ambition-PT2sGEpR2WL6gF914UZJ1 ;
-	d4w:clientSite "Digital-Wallonia" ;
-	a d4w:Event .
-	
-ex:organizer-3LBb2yyZuH9kU4k4FFt5lY d4w:title "Fédération Wallonie-Bruxelles"@fr ;
-	d4w:shortTitle "FWB"@fr ;
-	d4w:slug "federation-wallonie-bruxelles"@fr ;
-    d4w:logo ex:logo-50eBYXoMo5hWNO64efkQY2 ;
-	d4w:shortDescription "Institution au service des francophones de Bruxelles et de Wallonie. Ses compétences s'exercent en matière d'Enseignement, de Culture, de Sport, de Jeunesse, de Recherche scientifique et de Maisons de justice."@fr ;
-    d4w:website "http://www.federation-wallonie-bruxelles.be/" ;
-    d4w:socialNetwork "https://www.facebook.com/fwb.be/" , "https://www.linkedin.com/company/federation-wallonie-bruxelles/" ;
-	d4w:plateformContactPerson ex:qualifiedperson-467jZ0W6wU9D0mCz88uSMr ;
-    d4w:belgianEntreprise "Ministère de la Communauté française" ;
-	a d4w:Profile .
+d4wta:fwb eurovoc:status status:CURRENT ;
+	dcterms:identifier "1BBXrMJRdPNdWeZVNwDy5s" ;
+	owl:versionInfo "0.0.1" ;
+	skos:broader d4w:territoire ;
+	skos:definition "localisation ou activités en Fédération Wallonie-Bruxelles."@fr ;
+	skos:inScheme d4w:digital-wallonia ;
+	skos:prefLabel "Fédération Wallonie Bruxelles"@fr ;
+	a skos:Concept .
 
-ex:organizer-6npjWrscP2ULwQkMJEAHlD d4w:title "Parlement de Wallonie"@fr ;
-    d4w:slug "parlement-wallonie"@fr ;
-    d4w:shortDescription "Le Parlement wallon est l'assemblée législative de la Région wallonne. Il est composé de 75 députés. Les députés siègent en séances plénières et au sein de commissions dans le but d'adopter des décrets (lois régionales), de contrôler le gouvernement (interpellations et questions) et d'exprimer des positions sur des questions de société (résolutions)."@fr ;
-	d4w:website "https://www.parlement-wallonie.be/" ;
-	d4w:socialNetwork "https://twitter.com/ParlWallonie" ,
-					  "https://www.facebook.com/parlwal" ,
-					  "https://www.youtube.com/channel/UCUuYqgfbrMsn2Qx4TLXb_9A" ,
-  					  "https://www.linkedin.com/company/parlwal" ;
-	d4w:plateformContactPerson ex:qualifiedperson-467jZ0W6wU9D0mCz88uSMr ;
-	a d4w:Profile .
+d4wta:intelligence-artificielle eurovoc:status status:CURRENT ;
+	dcterms:identifier "3Dw4dMOjcRGmxKIHE4gibC" ;
+	owl:versionInfo "0.0.1" ;
+	skos:broader d4w:ict-advanced ;
+	skos:definition "Développement, production et déploiement de produits et services liés à l’intelligence artificielle : traduction automatique, chatbots, apprentissage automatique, machine learning, deep learning, etc."@fr ;
+	skos:inScheme d4w:digital-wallonia ;
+	skos:prefLabel "Intelligence artificielle  IA AI "@fr ;
+	a skos:Concept .
 
-ex:logo-50eBYXoMo5hWNO64efkQY2 d4w:title "Logo FWB"@fr ;
-    d4w:file <https://images.ctfassets.net/myqv2p4gx62v/50eBYXoMo5hWNO64efkQY2/b6ee3b87892d4d96ab46bba4df578c0c/FWB_Logo.jfif?h=250> ;
-    a d4w:Asset .
-
-ex:qualifiedperson-467jZ0W6wU9D0mCz88uSMr d4w:internalName "René François Ghislain Magritte - Fédération Wallonie-Bruxelles" ;
-	d4w:person ex:person-74ievn1aScz6OxdfHoU9KE ;
-	d4w:profile ex:organizer-3LBb2yyZuH9kU4k4FFt5lY ;
-    d4w:emailAddress "rene.magritte@cfb.be" ;
-	a d4w:QualifiedPerson .
-
-ex:person-74ievn1aScz6OxdfHoU9KE d4w:internalName "René François Ghislain Magritte" ;
-	d4w:firstName "René François Ghislain" ;
-	d4w:lastName "Magritte" ;
-	d4w:slug "rene-magritte" ;
-    d4w:displayRefusal "0"^^xsd:boolean ;
-	d4w:language "French" ;
-	a d4w:Person .
-
-d4wta:sensibilisation-au-numerique a skos:Concept ;
-    eurovoc:status status:CURRENT ;
-    dcterms:identifier "5AXumbFRrMBrMpZnW4rohT" ;
-    owl:versionInfo "0.0.1" ;
-    skos:broader d4w:reseaux ;
-    skos:definition "Acteurs et initiatives de sensibilisation et de promotion des technologies et usages numériques en Wallonie."@fr ;
-    skos:inScheme d4w:digital-wallonia ;
-    skos:prefLabel "Sensibilisation au numérique"@fr .
-
-d4wta:intelligence-artificielle a skos:Concept ;
-    eurovoc:status status:CURRENT ;
-    dcterms:identifier "3Dw4dMOjcRGmxKIHE4gibC" ;
-    owl:versionInfo "0.0.1" ;
-    skos:broader d4w:ict-advanced ;
-    skos:definition "Développement, production et déploiement de produits et services liés à l’intelligence artificielle : traduction automatique, chatbots, apprentissage automatique, machine learning, deep learning, etc."@fr ;
-    skos:inScheme d4w:digital-wallonia ;
-    skos:prefLabel "Intelligence artificielle  IA AI "@fr .
-
-d4wta:fwb a skos:Concept ;
-    eurovoc:status status:CURRENT ;
-    dcterms:identifier "1BBXrMJRdPNdWeZVNwDy5s" ;
-    owl:versionInfo "0.0.1" ;
-    skos:broader d4w:territoire ;
-    skos:definition "localisation ou activités en Fédération Wallonie-Bruxelles."@fr ;
-    skos:inScheme d4w:digital-wallonia ;
-    skos:prefLabel "Fédération Wallonie Bruxelles"@fr .
+d4wta:sensibilisation-au-numerique eurovoc:status status:CURRENT ;
+	dcterms:identifier "5AXumbFRrMBrMpZnW4rohT" ;
+	owl:versionInfo "0.0.1" ;
+	skos:broader d4w:reseaux ;
+	skos:definition "Acteurs et initiatives de sensibilisation et de promotion des technologies et usages numériques en Wallonie."@fr ;
+	skos:inScheme d4w:digital-wallonia ;
+	skos:prefLabel "Sensibilisation au numérique"@fr ;
+	a skos:Concept .
 
 ex:ambition-PT2sGEpR2WL6gF914UZJ1 d4w:title "Innovation numérique" ;
 	a d4w:Ambition .
+
+ex:event-4CCTPChHyptq3bDJSNlYrj d4w:additionalDescription "La conférence offrira l’opportunité d’aborder les liens qui unissent, d’une part, l’intelligence artificielle et, d’autre part, l’industrie créative et culturelle, l’enseignement, la santé et la gouvernance publique."@fr ;
+	d4w:ambition ex:ambition-PT2sGEpR2WL6gF914UZJ1 ;
+	d4w:category d4wta:sensibilisation-au-numerique, d4wta:intelligence-artificielle, d4wta:fwb ;
+	d4w:clientSite "Digital-Wallonia" ;
+	d4w:endDate "2025-01-29T16:30:00"^^xsd:dateTime ;
+	d4w:endPublicationDate "2050-01-01T00:00:00"^^xsd:dateTime ;
+	d4w:location "Parlement de la Fédération Wallonie-Bruxelles / Communauté française, Rue de la Loi, Bruxelles, Belgique" ;
+	d4w:organizer ex:organizer-3LBb2yyZuH9kU4k4FFt5lY, ex:organizer-6npjWrscP2ULwQkMJEAHlD ;
+	d4w:scheduleNotSpecified "0"^^xsd:boolean ;
+	d4w:shortDescription "le Parlement de la Fédération Wallonie-Bruxelles organise une conférence interparlementaire en collaboration avec le Parlement de Wallonie et le Parlement de la Région de Bruxelles-Capitale. Elle sera consacrée à l’intelligence artificielle et à ses impacts futurs."@fr ;
+	d4w:slug "conference-l-intelligence-artificielle-et-ses-impacts-futurs"@fr ;
+	d4w:startDate "2025-01-29T08:15:00"^^xsd:dateTime ;
+	d4w:title "Conférence. L'intelligence artificielle et ses impacts futurs"@fr ;
+	d4w:type "Event" ;
+	d4w:website "https://www.pfwb.be/actualites/lintelligence-artificielle-et-ses-impacts-futurs-conference" ;
+	a d4w:Event .
+
+ex:logo-50eBYXoMo5hWNO64efkQY2 d4w:file <https://images.ctfassets.net/myqv2p4gx62v/50eBYXoMo5hWNO64efkQY2/b6ee3b87892d4d96ab46bba4df578c0c/FWB_Logo.jfif?h=250> ;
+	d4w:title "Logo FWB"@fr ;
+	a d4w:Asset .
+
+ex:organizer-3LBb2yyZuH9kU4k4FFt5lY d4w:belgianEntreprise "Ministère de la Communauté française" ;
+	d4w:logo ex:logo-50eBYXoMo5hWNO64efkQY2 ;
+	d4w:plateformContactPerson ex:qualifiedperson-467jZ0W6wU9D0mCz88uSMr ;
+	d4w:shortDescription "Institution au service des francophones de Bruxelles et de Wallonie. Ses compétences s'exercent en matière d'Enseignement, de Culture, de Sport, de Jeunesse, de Recherche scientifique et de Maisons de justice."@fr ;
+	d4w:shortTitle "FWB"@fr ;
+	d4w:slug "federation-wallonie-bruxelles"@fr ;
+	d4w:socialNetwork "https://www.facebook.com/fwb.be/", "https://www.linkedin.com/company/federation-wallonie-bruxelles/" ;
+	d4w:title "Fédération Wallonie-Bruxelles"@fr ;
+	d4w:website "http://www.federation-wallonie-bruxelles.be/" ;
+	a d4w:Profile .
+
+ex:organizer-6npjWrscP2ULwQkMJEAHlD d4w:plateformContactPerson ex:qualifiedperson-467jZ0W6wU9D0mCz88uSMr ;
+	d4w:shortDescription "Le Parlement wallon est l'assemblée législative de la Région wallonne. Il est composé de 75 députés. Les députés siègent en séances plénières et au sein de commissions dans le but d'adopter des décrets (lois régionales), de contrôler le gouvernement (interpellations et questions) et d'exprimer des positions sur des questions de société (résolutions)."@fr ;
+	d4w:slug "parlement-wallonie"@fr ;
+	d4w:socialNetwork "https://twitter.com/ParlWallonie", "https://www.facebook.com/parlwal", "https://www.youtube.com/channel/UCUuYqgfbrMsn2Qx4TLXb_9A", "https://www.linkedin.com/company/parlwal" ;
+	d4w:title "Parlement de Wallonie"@fr ;
+	d4w:website "https://www.parlement-wallonie.be/" ;
+	a d4w:Profile .
+
+ex:person-74ievn1aScz6OxdfHoU9KE d4w:displayRefusal "0"^^xsd:boolean ;
+	d4w:firstName "René François Ghislain" ;
+	d4w:internalName "René François Ghislain Magritte" ;
+	d4w:language "French" ;
+	d4w:lastName "Magritte" ;
+	d4w:slug "rene-magritte" ;
+	a d4w:Person .
+
+ex:qualifiedperson-467jZ0W6wU9D0mCz88uSMr d4w:emailAddress "rene.magritte@cfb.be" ;
+	d4w:internalName "René François Ghislain Magritte - Fédération Wallonie-Bruxelles" ;
+	d4w:person ex:person-74ievn1aScz6OxdfHoU9KE ;
+	d4w:profile ex:organizer-3LBb2yyZuH9kU4k4FFt5lY ;
+	a d4w:QualifiedPerson .
+
+<https://images.ctfassets.net/myqv2p4gx62v/50eBYXoMo5hWNO64efkQY2/b6ee3b87892d4d96ab46bba4df578c0c/FWB_Logo.jfif?h=250> a d4w:File .
+

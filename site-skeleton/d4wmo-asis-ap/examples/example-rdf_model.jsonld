@@ -2,7 +2,6 @@
   "@context": [
   "https://digitalwallonia.github.io/data4wallonia-generated/D4WMO-AP-ASIS/releases/1.0.0/context/d4wmo-ap-asis.jsonld",
   {
-  "@context": {
     "dcterms": "http://purl.org/dc/terms/",
     "owl": "http://www.w3.org/2002/07/owl#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -17,7 +16,7 @@
   "@graph": [
     {
       "@id": "d4wta:fwb",
-      "@type": "Concept",
+      "@type": "Code",
       "eurovoc:status": {
         "@id": "status:CURRENT"
       },
@@ -40,7 +39,7 @@
     },
     {
       "@id": "d4wta:intelligence-artificielle",
-      "@type": "Concept",
+      "@type": "Code",
       "eurovoc:status": {
         "@id": "status:CURRENT"
       },
@@ -63,7 +62,7 @@
     },
     {
       "@id": "d4wta:sensibilisation-au-numerique",
-      "@type": "Concept",
+      "@type": "Code",
       "eurovoc:status": {
         "@id": "status:CURRENT"
       },
@@ -216,8 +215,8 @@
       ],
       "d4w:title": {
         "@language": "fr",
-		"@value": "Parlement de Wallonie"
-	  },
+        "@value": "Parlement de Wallonie"
+      },
       "d4w:website": "https://www.parlement-wallonie.be/"
     },
     {
@@ -244,6 +243,10 @@
       "d4w:profile": {
         "@id": "ex:organizer-3LBb2yyZuH9kU4k4FFt5lY"
       }
+    },
+    {
+      "@id": "https://images.ctfassets.net/myqv2p4gx62v/50eBYXoMo5hWNO64efkQY2/b6ee3b87892d4d96ab46bba4df578c0c/FWB_Logo.jfif?h=250",
+      "@type": "File"
     }
   ]
 }
