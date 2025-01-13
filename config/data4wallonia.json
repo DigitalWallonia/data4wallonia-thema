@@ -57,11 +57,7 @@
         "mergefile":"d4wmo-asis-ap_en_merged.jsonld"
       }
     ],
-    "toolchainversion" : "3",
-    "documentconfig": {
-          "statuslabel" : "Draft",
-          "editorDocumentroot" : "https://digitalwallonia.github.io/data4wallonia-generated/D4WMO-AP-ASIS-E/releases/1.0.0"
-    }
+    "toolchainversion" : "3"
 },
 {
   "name": "d4wmo-voc-asis",
