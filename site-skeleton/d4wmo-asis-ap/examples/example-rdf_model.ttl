@@ -9,36 +9,6 @@
 @prefix eurovoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix status: <http://publications.europa.eu/resource/authority/concept-status/> .
 
-d4wta:fwb eurovoc:status status:CURRENT ;
-	dcterms:identifier "1BBXrMJRdPNdWeZVNwDy5s" ;
-	owl:versionInfo "0.0.1" ;
-	skos:broader d4w:territoire ;
-	skos:definition "localisation ou activités en Fédération Wallonie-Bruxelles."@fr ;
-	skos:inScheme d4w:digital-wallonia ;
-	skos:prefLabel "Fédération Wallonie Bruxelles"@fr ;
-	a skos:Concept .
-
-d4wta:intelligence-artificielle eurovoc:status status:CURRENT ;
-	dcterms:identifier "3Dw4dMOjcRGmxKIHE4gibC" ;
-	owl:versionInfo "0.0.1" ;
-	skos:broader d4w:ict-advanced ;
-	skos:definition "Développement, production et déploiement de produits et services liés à l’intelligence artificielle : traduction automatique, chatbots, apprentissage automatique, machine learning, deep learning, etc."@fr ;
-	skos:inScheme d4w:digital-wallonia ;
-	skos:prefLabel "Intelligence artificielle  IA AI "@fr ;
-	a skos:Concept .
-
-d4wta:sensibilisation-au-numerique eurovoc:status status:CURRENT ;
-	dcterms:identifier "5AXumbFRrMBrMpZnW4rohT" ;
-	owl:versionInfo "0.0.1" ;
-	skos:broader d4w:reseaux ;
-	skos:definition "Acteurs et initiatives de sensibilisation et de promotion des technologies et usages numériques en Wallonie."@fr ;
-	skos:inScheme d4w:digital-wallonia ;
-	skos:prefLabel "Sensibilisation au numérique"@fr ;
-	a skos:Concept .
-
-ex:ambition-PT2sGEpR2WL6gF914UZJ1 d4w:title "Innovation numérique" ;
-	a d4w:Ambition .
-
 ex:event-4CCTPChHyptq3bDJSNlYrj d4w:additionalDescription "La conférence offrira l’opportunité d’aborder les liens qui unissent, d’une part, l’intelligence artificielle et, d’autre part, l’industrie créative et culturelle, l’enseignement, la santé et la gouvernance publique."@fr ;
 	d4w:ambition ex:ambition-PT2sGEpR2WL6gF914UZJ1 ;
 	d4w:category d4wta:sensibilisation-au-numerique, d4wta:intelligence-artificielle, d4wta:fwb ;
@@ -55,6 +25,24 @@ ex:event-4CCTPChHyptq3bDJSNlYrj d4w:additionalDescription "La conférence offrir
 	d4w:type "Event" ;
 	d4w:website "https://www.pfwb.be/actualites/lintelligence-artificielle-et-ses-impacts-futurs-conference" ;
 	a d4w:Event .
+
+ex:ambition-PT2sGEpR2WL6gF914UZJ1 d4w:title "Innovation numérique"@fr ;
+	d4w:slug "innovation-numerique"@fr ;
+	d4w:referencePost ex:post-7H1A4Hkjv8Fs0BG5cp1L5O ;
+	d4w:logo ex:logo-6g677yu7zTnGqOnYXfZoyy ;
+	a d4w:Ambition .
+	
+ex:post-7H1A4Hkjv8Fs0BG5cp1L5O d4w:title "Stratégie Digital Wallonia. Ambition   \"Innovation Numérique\""@fr ;
+    d4w:slug "ambition-innovation-numerique"@fr ;
+	d4w:type "Feature article" ;
+	d4w:introduction "Développer notre excellence technologique : soutenir l’innovation du secteur du numérique pour capter la valeur ajoutée de l’économie numérique au profit de son territoire et de l’ensemble de ses secteurs d’activité. Cette ambition se décline notamment au travers des programmes DW 4 Startups, DW International, Tech & Recherche, Digital 4 Circular de la stratégie numérique Digital Wallonia."@fr ;
+    d4w:content "La Wallonie doit s’appuyer sur un réseau d’entreprises du numérique hautement innovantes, notamment en renforçant la spécialisation du secteur du numérique dans des écosystèmes forts et en le spécialisant dans les chaînes de valeur stratégiques européennes. L’ambition du secteur du numérique doit être européenne, au travers de nos leaders technologiques, des startups à fort potentiel, de nos centres de recherche et du réseau des hubs internationaux. Enfin, le développement du secteur du numérique doit favoriser une économie plus résiliente face aux crises et intégrer les opportunités économiques de la transition verte et de l’économie circulaire."@fr ;
+    d4w:publishedDate "2015-12-10T18:00:00"^^xsd:dateTime ;
+	a d4w:Post .
+
+ex:logo-6g677yu7zTnGqOnYXfZoyy d4w:file <https://images.ctfassets.net/myqv2p4gx62v/6g677yu7zTnGqOnYXfZoyy/995d8e82828205a3899caeb3e579cc42/Picto_InnovationNumerique.svg> ;
+	d4w:title "Picto Innovation Numerique"@fr ;
+	a d4w:Asset .
 
 ex:logo-50eBYXoMo5hWNO64efkQY2 d4w:file <https://images.ctfassets.net/myqv2p4gx62v/50eBYXoMo5hWNO64efkQY2/b6ee3b87892d4d96ab46bba4df578c0c/FWB_Logo.jfif?h=250> ;
 	d4w:title "Logo FWB"@fr ;
@@ -93,6 +81,35 @@ ex:person-74ievn1aScz6OxdfHoU9KE d4w:displayRefusal "0"^^xsd:boolean ;
 	d4w:lastName "Magritte" ;
 	d4w:slug "rene-magritte" ;
 	a d4w:Person .
+	
+d4wta:fwb eurovoc:status status:CURRENT ;
+	dcterms:identifier "1BBXrMJRdPNdWeZVNwDy5s" ;
+	owl:versionInfo "0.0.1" ;
+	skos:broader d4w:territoire ;
+	skos:definition "localisation ou activités en Fédération Wallonie-Bruxelles."@fr ;
+	skos:inScheme d4w:digital-wallonia ;
+	skos:prefLabel "Fédération Wallonie Bruxelles"@fr ;
+	a skos:Concept .
+
+d4wta:intelligence-artificielle eurovoc:status status:CURRENT ;
+	dcterms:identifier "3Dw4dMOjcRGmxKIHE4gibC" ;
+	owl:versionInfo "0.0.1" ;
+	skos:broader d4w:ict-advanced ;
+	skos:definition "Développement, production et déploiement de produits et services liés à l’intelligence artificielle : traduction automatique, chatbots, apprentissage automatique, machine learning, deep learning, etc."@fr ;
+	skos:inScheme d4w:digital-wallonia ;
+	skos:prefLabel "Intelligence artificielle  IA AI "@fr ;
+	a skos:Concept .
+
+d4wta:sensibilisation-au-numerique eurovoc:status status:CURRENT ;
+	dcterms:identifier "5AXumbFRrMBrMpZnW4rohT" ;
+	owl:versionInfo "0.0.1" ;
+	skos:broader d4w:reseaux ;
+	skos:definition "Acteurs et initiatives de sensibilisation et de promotion des technologies et usages numériques en Wallonie."@fr ;
+	skos:inScheme d4w:digital-wallonia ;
+	skos:prefLabel "Sensibilisation au numérique"@fr ;
+	a skos:Concept .
+
+<https://images.ctfassets.net/myqv2p4gx62v/6g677yu7zTnGqOnYXfZoyy/995d8e82828205a3899caeb3e579cc42/Picto_InnovationNumerique.svg> a d4w:File .
 
 <https://images.ctfassets.net/myqv2p4gx62v/50eBYXoMo5hWNO64efkQY2/b6ee3b87892d4d96ab46bba4df578c0c/FWB_Logo.jfif?h=250> a d4w:File .
 
