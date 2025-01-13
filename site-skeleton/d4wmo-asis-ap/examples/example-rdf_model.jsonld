@@ -124,11 +124,11 @@
       ],
       "d4w:clientSite": "Digital-Wallonia",
       "d4w:endDate": {
-        "@type": "dateTime",
+        "@type": "xsd:dateTime",
         "@value": "2025-01-29T16:30:00"
       },
       "d4w:endPublicationDate": {
-        "@type": "dateTime",
+        "@type": "xsd:dateTime",
         "@value": "2050-01-01T00:00:00"
       },
       "d4w:location": "Parlement de la Fédération Wallonie-Bruxelles / Communauté française, Rue de la Loi, Bruxelles, Belgique",
@@ -141,7 +141,7 @@
         }
       ],
       "d4w:scheduleNotSpecified": {
-        "@type": "boolean",
+        "@type": "xsd:boolean",
         "@value": "0"
       },
       "d4w:shortDescription": {
@@ -153,7 +153,7 @@
         "@value": "conference-l-intelligence-artificielle-et-ses-impacts-futurs"
       },
       "d4w:startDate": {
-        "@type": "dateTime",
+        "@type": "xsd:dateTime",
         "@value": "2025-01-29T08:15:00"
       },
       "d4w:title": {
@@ -247,7 +247,7 @@
       "@id": "ex:person-74ievn1aScz6OxdfHoU9KE",
       "@type": "Person",
       "d4w:displayRefusal": {
-        "@type": "boolean",
+        "@type": "xsd:boolean",
         "@value": "0"
       },
       "d4w:featuredEmail": "rene.magritte@cfb.be",
@@ -269,7 +269,7 @@
         "@value": "Développer notre excellence technologique : soutenir l’innovation du secteur du numérique pour capter la valeur ajoutée de l’économie numérique au profit de son territoire et de l’ensemble de ses secteurs d’activité. Cette ambition se décline notamment au travers des programmes DW 4 Startups, DW International, Tech & Recherche, Digital 4 Circular de la stratégie numérique Digital Wallonia."
       },
       "d4w:publishedDate": {
-        "@type": "dateTime",
+        "@type": "xsd:dateTime",
         "@value": "2015-12-10T18:00:00"
       },
       "d4w:slug": {
