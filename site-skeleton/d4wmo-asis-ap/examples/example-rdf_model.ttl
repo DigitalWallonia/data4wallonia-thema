@@ -1,13 +1,13 @@
+@prefix d4w: <http://data4wallonia.com/resource/model/> .
+@prefix d4wta: <http://data4wallonia.com/resource/taxonomy/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eurovoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix ex: <http://example.com/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix d4w: <http://data4wallonia.com/resource/model/> .
-@prefix d4wta: <http://data4wallonia.com/resource/taxonomy/> .
-@prefix ex: <http://example.com/> .
-@prefix eurovoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix status: <http://publications.europa.eu/resource/authority/concept-status/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:event-4CCTPChHyptq3bDJSNlYrj d4w:additionalDescription "La conférence offrira l’opportunité d’aborder les liens qui unissent, d’une part, l’intelligence artificielle et, d’autre part, l’industrie créative et culturelle, l’enseignement, la santé et la gouvernance publique."@fr ;
 	d4w:ambition ex:ambition-PT2sGEpR2WL6gF914UZJ1 ;
