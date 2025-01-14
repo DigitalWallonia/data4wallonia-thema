@@ -7,7 +7,7 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "d4w": "http://data4wallonia.com/model/",
+    "d4w": "http://data4wallonia.com/resource/model/",
     "d4wta": "http://data4wallonia.com/resource/taxonomy/",
     "ex": "http://example.com/",
     "eurovoc": "http://publications.europa.eu/ontology/euvoc#",
