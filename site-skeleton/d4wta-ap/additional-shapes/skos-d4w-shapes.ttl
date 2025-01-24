@@ -13,7 +13,7 @@
   rdfs:comment "A list of checks on the taxonomy labels"@en ;
   sh:property :D4W-LabelsInFrenchOrEnglish, :D4W-LabelsAtLeastInFrench, 
               :D4W-LabelsDoNotContainCharacters, :D4W-LabelsStartCapital ,
-			  :D4W-versionInfo .
+			  :D4W-versionInfo, :D4W-LabelsDoNotContainCharacter- .
 
 :D4W-LabelsInFrenchOrEnglish a sh:PropertyShape ;
     sh:name "Labels in French or English"@en ;
@@ -41,8 +41,8 @@
 	sh:description "Labels should avoid special characters to facilitate automated translation"@en ;
 	sh:severity sh:Warning ;
 	sh:path skos:prefLabel ;
-	sh:message "[D4W.TA.R3] - Labels should not contain special characters: & - ( ) \\ or /" ;
-	sh:not [sh:pattern "^.*[&\\-()\\\\/]+.*$"] .
+	sh:message "[D4W.TA.R3] - Labels should not contain special characters: & ( ) \\ or /" ;
+	sh:not [sh:pattern "^.*[&()\\\\/]+.*$"] .
 
 :D4W-LabelsStartCapital a sh:PropertyShape ;
 	sh:name "Labels should start with capital letters"@en ;
@@ -79,3 +79,11 @@
 		  status:REVISED status:REVISED_DEPRECATED 
 		  status:WAITING status:WAITING_DEPRECATED ) .
 
+:D4W-LabelsDoNotContainCharacter- a sh:PropertyShape ;
+	sh:name "Labels do not contains the special character - "@en ;
+	sh:description "Labels should avoid special characters to facilitate automated translation"@en ;
+	sh:severity sh:Warning ;
+	sh:path skos:prefLabel ;
+	sh:message "[D4W.TA.R7] - Labels should not contain the special character - " ;
+	sh:not [sh:pattern "^.*[\\-]+.*$"] ;
+	sh:deactivated true. 
