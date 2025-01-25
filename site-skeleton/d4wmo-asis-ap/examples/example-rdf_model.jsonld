@@ -16,11 +16,18 @@
   "@graph": [
     {
       "@id": "d4wta:fwb",
-      "@type": "Code",
+      "@type": "skos:Concept",
+      "d4w:enabledBack": {
+        "@type": "xsd:boolean",
+        "@value": "true"
+      },
       "eurovoc:status": {
         "@id": "status:CURRENT"
       },
-      "dcterms:identifier": "1BBXrMJRdPNdWeZVNwDy5s",
+      "dcterms:identifier": {
+        "@language": "fr",
+        "@value": "fwb"
+      },
       "owl:versionInfo": "0.0.1",
       "skos:broader": {
         "@id": "d4w:territoire"
@@ -39,11 +46,18 @@
     },
     {
       "@id": "d4wta:intelligence-artificielle",
-      "@type": "Code",
+      "@type": "skos:Concept",
+      "d4w:enabledBack": {
+        "@type": "xsd:boolean",
+        "@value": "true"
+      },
       "eurovoc:status": {
         "@id": "status:CURRENT"
       },
-      "dcterms:identifier": "3Dw4dMOjcRGmxKIHE4gibC",
+      "dcterms:identifier": {
+        "@language": "fr",
+        "@value": "intelligence-artificielle"
+      },
       "owl:versionInfo": "0.0.1",
       "skos:broader": {
         "@id": "d4w:ict-advanced"
@@ -62,11 +76,18 @@
     },
     {
       "@id": "d4wta:sensibilisation-au-numerique",
-      "@type": "Code",
+      "@type": "skos:Concept",
+      "d4w:enabledBack": {
+        "@type": "xsd:boolean",
+        "@value": "true"
+      },
       "eurovoc:status": {
         "@id": "status:CURRENT"
       },
-      "dcterms:identifier": "5AXumbFRrMBrMpZnW4rohT",
+      "dcterms:identifier": {
+        "@language": "fr",
+        "@value": "sensibilisation-au-numerique"
+      },
       "owl:versionInfo": "0.0.1",
       "skos:broader": {
         "@id": "d4w:reseaux"
@@ -85,7 +106,7 @@
     },
     {
       "@id": "ex:ambition-PT2sGEpR2WL6gF914UZJ1",
-      "@type": "Ambition",
+      "@type": "d4w:Ambition",
       "d4w:logo": {
         "@id": "ex:logo-6g677yu7zTnGqOnYXfZoyy"
       },
@@ -103,7 +124,7 @@
     },
     {
       "@id": "ex:event-4CCTPChHyptq3bDJSNlYrj",
-      "@type": "Event",
+      "@type": "d4w:Event",
       "d4w:additionalDescription": {
         "@language": "fr",
         "@value": "La conférence offrira l’opportunité d’aborder les liens qui unissent, d’une part, l’intelligence artificielle et, d’autre part, l’industrie créative et culturelle, l’enseignement, la santé et la gouvernance publique."
@@ -165,7 +186,7 @@
     },
     {
       "@id": "ex:logo-50eBYXoMo5hWNO64efkQY2",
-      "@type": "Asset",
+      "@type": "d4w:Asset",
       "d4w:file": {
         "@id": "https://images.ctfassets.net/myqv2p4gx62v/50eBYXoMo5hWNO64efkQY2/b6ee3b87892d4d96ab46bba4df578c0c/FWB_Logo.jfif?h=250"
       },
@@ -176,7 +197,7 @@
     },
     {
       "@id": "ex:logo-6g677yu7zTnGqOnYXfZoyy",
-      "@type": "Asset",
+      "@type": "d4w:Asset",
       "d4w:file": {
         "@id": "https://images.ctfassets.net/myqv2p4gx62v/6g677yu7zTnGqOnYXfZoyy/995d8e82828205a3899caeb3e579cc42/Picto_InnovationNumerique.svg"
       },
@@ -187,7 +208,7 @@
     },
     {
       "@id": "ex:organizer-3LBb2yyZuH9kU4k4FFt5lY",
-      "@type": "Profile",
+      "@type": "d4w:Profile",
       "d4w:belgianEntreprise": "Ministère de la Communauté française",
       "d4w:logo": {
         "@id": "ex:logo-50eBYXoMo5hWNO64efkQY2"
@@ -219,7 +240,7 @@
     },
     {
       "@id": "ex:organizer-6npjWrscP2ULwQkMJEAHlD",
-      "@type": "Profile",
+      "@type": "d4w:Profile",
       "d4w:plateformContactPerson": {
         "@id": "ex:qualifiedperson-467jZ0W6wU9D0mCz88uSMr"
       },
@@ -245,7 +266,7 @@
     },
     {
       "@id": "ex:person-74ievn1aScz6OxdfHoU9KE",
-      "@type": "Person",
+      "@type": "d4w:Person",
       "d4w:displayRefusal": {
         "@type": "xsd:boolean",
         "@value": "0"
@@ -255,11 +276,14 @@
       "d4w:internalName": "René François Ghislain Magritte",
       "d4w:language": "French",
       "d4w:lastName": "Magritte",
-      "d4w:slug": "rene-magritte"
+      "d4w:slug": {
+        "@language": "fr",
+        "@value": "rene-magritte"
+      }
     },
     {
       "@id": "ex:post-7H1A4Hkjv8Fs0BG5cp1L5O",
-      "@type": "Post",
+      "@type": "d4w:Post",
       "d4w:content": {
         "@language": "fr",
         "@value": "La Wallonie doit s’appuyer sur un réseau d’entreprises du numérique hautement innovantes, notamment en renforçant la spécialisation du secteur du numérique dans des écosystèmes forts et en le spécialisant dans les chaînes de valeur stratégiques européennes. L’ambition du secteur du numérique doit être européenne, au travers de nos leaders technologiques, des startups à fort potentiel, de nos centres de recherche et du réseau des hubs internationaux. Enfin, le développement du secteur du numérique doit favoriser une économie plus résiliente face aux crises et intégrer les opportunités économiques de la transition verte et de l’économie circulaire."
@@ -284,7 +308,7 @@
     },
     {
       "@id": "ex:qualifiedperson-467jZ0W6wU9D0mCz88uSMr",
-      "@type": "QualifiedPerson",
+      "@type": "d4w:QualifiedPerson",
       "d4w:emailAddress": "rene.magritte@cfb.be",
       "d4w:internalName": "René François Ghislain Magritte - Fédération Wallonie-Bruxelles",
       "d4w:person": {
@@ -296,11 +320,11 @@
     },
     {
       "@id": "https://images.ctfassets.net/myqv2p4gx62v/50eBYXoMo5hWNO64efkQY2/b6ee3b87892d4d96ab46bba4df578c0c/FWB_Logo.jfif?h=250",
-      "@type": "File"
+      "@type": "d4w:File"
     },
     {
       "@id": "https://images.ctfassets.net/myqv2p4gx62v/6g677yu7zTnGqOnYXfZoyy/995d8e82828205a3899caeb3e579cc42/Picto_InnovationNumerique.svg",
-      "@type": "File"
+      "@type": "d4w:File"
     }
   ]
 }
