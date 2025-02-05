@@ -45,12 +45,12 @@
 	sh:not [sh:pattern "^.*[&()\\\\/]+.*$"] .
 
 :D4W-LabelsStartCapital a sh:PropertyShape ;
-	sh:name "Labels should start with capital letters"@en ;
-	sh:description "Labels should start with capital letters for consistency"@en ;
+	sh:name "Labels should start with capital letters or digit"@en ;
+	sh:description "Labels should start with capital letters or a digit for consistency"@en ;
 	sh:severity sh:Warning ;
 	sh:path skos:prefLabel ;
-	sh:message "[D4W.TA.R4] - Labels should start with capital letter." ;
-	sh:pattern "^[A-Z]+.*$" .
+	sh:message "[D4W.TA.R4] - Labels should start with capital letter or digit." ;
+	sh:pattern "^[A-Z0-9]+.*$" .
 
 :D4W-versionInfo a sh:PropertyShape ;
     sh:name "versionInfo should be in Semantic versioning format"@en ;
