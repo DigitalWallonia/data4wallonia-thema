@@ -170,7 +170,7 @@
   "publication-date": "2026-07-01",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "contributors-file": "stakeholders.csv",
-  "contributors-column": "D4WMO-CPSVAP",
+  "contributors-column": "D4WTA-AP",
   "site": "site-skeleton/d4wmo-cpsvap",
   "repourl": "https://github.com/DigitalWallonia/D4WMO-CPSVAP/tree/master/releases/1.0.0",
   "versionurl": "https://github.com/DigitalWallonia/D4WMO-CPSVAP/tree/master/releases/1.0.0",
