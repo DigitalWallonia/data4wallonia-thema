@@ -1,0 +1,484 @@
+# =============================================================================
+#  Sample data for the Data4Wallonia Generic Model (D4WMO-Generic) v1.0.2
+#  Validated against: releases/1.0.2/shacl/d4wmo-generic-SHACL.ttl (pySHACL)
+#
+#  Scenario (entirely fictional): a digital-inclusion programme in Namur
+#  — an organisation profile, its legal entity, people, a public digital space
+#  (ServicesPlace), an event, a blog post, a press review and an action plan.
+# =============================================================================
+
+@prefix adms:    <http://www.w3.org/ns/adms#> .
+@prefix concept: <https://data.example.be/d4w/concept/> .
+@prefix d4w:     <https://interoperability.digitalwallonia.be/uri/D4WMO-Generic/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix ex:      <https://data.example.be/d4w/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix legal:   <http://www.w3.org/ns/legal#> .
+@prefix locn:    <http://www.w3.org/ns/locn#> .
+@prefix m8g:     <http://data.europa.eu/m8g/> .
+@prefix org:     <http://www.w3.org/ns/org#> .
+@prefix person:  <http://www.w3.org/ns/person#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rov:     <http://www.w3.org/ns/legal-entity#> .
+@prefix schema:  <https://schema.org/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:    <http://www.w3.org/2006/time#> .
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+# -----------------------------------------------------------------------------
+#  Code lists (skos:Concept) — every sh:class skos:Concept target needs a type
+# -----------------------------------------------------------------------------
+concept:europe              a skos:Concept ; skos:prefLabel "Europe"@en , "Europe"@fr .
+concept:eur                 a skos:Concept ; skos:prefLabel "Euro"@en ; skos:notation "EUR" .
+concept:gender-female       a skos:Concept ; skos:prefLabel "Female"@en , "Féminin"@fr .
+concept:gender-male         a skos:Concept ; skos:prefLabel "Male"@en , "Masculin"@fr .
+concept:consent-given       a skos:Concept ; skos:prefLabel "Consent given"@en .
+concept:lang-fr             a skos:Concept ; skos:prefLabel "French"@en , "Français"@fr ; skos:notation "fr" .
+concept:lang-en             a skos:Concept ; skos:prefLabel "English"@en , "Anglais"@fr ; skos:notation "en" .
+concept:cat-digital-inclusion a skos:Concept ; skos:prefLabel "Digital inclusion"@en , "Inclusion numérique"@fr .
+concept:cat-training        a skos:Concept ; skos:prefLabel "Training"@en , "Formation"@fr .
+concept:cat-public-space    a skos:Concept ; skos:prefLabel "Public digital space"@en , "Espace public numérique"@fr .
+concept:dept-operations     a skos:Concept ; skos:prefLabel "Operations"@en , "Opérations"@fr .
+concept:dept-communication  a skos:Concept ; skos:prefLabel "Communication"@en .
+concept:role-coordinator    a skos:Concept ; skos:prefLabel "Coordinator"@en , "Coordinateur"@fr .
+concept:role-partner        a skos:Concept ; skos:prefLabel "Partner"@en , "Partenaire"@fr .
+concept:nace-85599          a skos:Concept ; skos:prefLabel "Other education n.e.c."@en ; skos:notation "85.599" .
+concept:org-nonprofit       a skos:Concept ; skos:prefLabel "Non-profit association (ASBL)"@en , "ASBL"@fr .
+
+# -----------------------------------------------------------------------------
+#  Assets & files (adms:Asset is required by sh:class; d4w:Asset activates
+#  AssetShape so title/description/file are validated too)
+# -----------------------------------------------------------------------------
+ex:file-logo     a d4w:File .
+ex:file-photo    a d4w:File .
+ex:file-pdf      a d4w:File .
+
+ex:asset-logo a adms:Asset , d4w:Asset ;
+    d4w:title "Logo NumériNamur"@fr , "NumériNamur logo"@en ;
+    d4w:description "Logo officiel de l'ASBL"@fr ;
+    d4w:file ex:file-logo .
+
+ex:asset-photo-claire a adms:Asset , d4w:Asset ;
+    d4w:title "Photo de profil – Claire Dumont"@fr ;
+    d4w:file ex:file-photo .
+
+ex:asset-facade a adms:Asset , d4w:Asset ;
+    d4w:title "Façade de l'EPN de Jambes"@fr , "Front of the Jambes public digital space"@en .
+
+ex:asset-inside a adms:Asset , d4w:Asset ;
+    d4w:title "Salle informatique"@fr .
+
+ex:asset-banner a adms:Asset , d4w:Asset ;
+    d4w:title "Bannière atelier"@fr .
+
+ex:asset-report a adms:Asset , d4w:Asset ;
+    d4w:title "Rapport d'activités 2025"@fr , "2025 activity report"@en ;
+    d4w:description "Rapport annuel au format PDF"@fr ;
+    d4w:file ex:file-pdf .
+
+ex:homepage-numerinamur a foaf:Document .
+ex:contact-page         a foaf:Document .
+ex:event-page           a foaf:Document .
+
+# -----------------------------------------------------------------------------
+#  Addresses & geometry
+# -----------------------------------------------------------------------------
+ex:address-hq a locn:Address ;
+    locn:fullAddress "Rue de l'Exemple 12, 5000 Namur, Belgique"@fr ,
+                     "Rue de l'Exemple 12, 5000 Namur, Belgium"@en ;
+    locn:thoroughfare "Rue de l'Exemple"@fr ;
+    locn:locatorDesignator "12" ;
+    locn:locatorName "Bâtiment A"@fr ;
+    locn:postCode "5000" ;
+    locn:postName "Namur"@fr ;
+    locn:adminUnitL1 "Belgique"@fr , "Belgium"@en ;
+    locn:adminUnitL2 "Province de Namur"@fr ;
+    d4w:continent concept:europe .
+
+ex:address-epn a locn:Address ;
+    locn:fullAddress "Avenue Fictive 3, 5100 Jambes, Belgique"@fr ;
+    locn:thoroughfare "Avenue Fictive"@fr ;
+    locn:locatorDesignator "3" ;
+    locn:postCode "5100" ;
+    locn:postName "Jambes"@fr ;
+    locn:adminUnitL1 "Belgique"@fr ;
+    locn:adminUnitL2 "Province de Namur"@fr ;
+    d4w:continent concept:europe .
+
+ex:geometry-epn a locn:Geometry ;
+    m8g:latitude  "50.4560" ;
+    m8g:longitude "4.8740" .
+
+# -----------------------------------------------------------------------------
+#  Contact points
+# -----------------------------------------------------------------------------
+ex:cp-numerinamur a m8g:ContactPoint ;
+    dct:identifier "CP-0001"@fr ;
+    schema:contactType "general" ;
+    m8g:email "info@numerinamur.example" ;
+    d4w:hasNonFeaturedEmail "direction@numerinamur.example" ;
+    m8g:telephone "+32 81 00 00 00" ;
+    d4w:website "https://numerinamur.example" ;
+    d4w:socialNetwork "https://www.linkedin.com/company/numerinamur-example" ;
+    m8g:contactPage ex:contact-page .
+
+ex:cp-claire a m8g:ContactPoint ;
+    dct:identifier "CP-0002"@fr ;
+    schema:contactType "personal" ;
+    m8g:email "claire.dumont@numerinamur.example" ;
+    m8g:telephone "+32 470 00 00 01" .
+
+# -----------------------------------------------------------------------------
+#  Identifier & legal entities
+# -----------------------------------------------------------------------------
+ex:id-bce-numerinamur a adms:Identifier ;
+    skos:notation "0123.456.789" ;
+    adms:schemaAgency "Banque-Carrefour des Entreprises" ;
+    rdfs:label "Numéro d'entreprise BCE"@fr , "Belgian company number"@en ;
+    dct:conformsTo "https://kbopub.economie.fgov.be/"^^xsd:anyURI ;
+    dct:issued "2015-03-02"^^xsd:date .
+
+ex:le-numerinamur a legal:LegalEntity ;
+    dct:identifier "BE0123456789"@fr ;
+    org:identifier "0123.456.789" ;
+    adms:identifier ex:id-bce-numerinamur ;
+    legal:legalName "NumériNamur ASBL"@fr ;
+    dct:alternative "NumériNamur"@fr ;
+    d4w:VATNumber "BE0123456789"@fr ;
+    d4w:liableToVAT false ;
+    d4w:activeEntity true ;
+    d4w:mainNACECode "85.599"@fr ;
+    d4w:activityDescription "Formation et accompagnement aux usages numériques"@fr ,
+                            "Digital skills training and support"@en ;
+    rov:companyActivity concept:nace-85599 ;
+    org:classification concept:org-nonprofit ;
+    m8g:registeredAddress ex:address-hq ;
+    m8g:registrationDate "2015-03-02"^^xsd:date ;
+    d4w:contactPoint ex:cp-numerinamur ;
+    d4w:logo ex:asset-logo ;
+    org:memberOf ex:le-federation ;
+    d4w:clientSite "digitalwallonia.be" .
+
+ex:le-federation a legal:LegalEntity ;
+    dct:identifier "BE0987654321"@fr ;
+    legal:legalName "Fédération wallonne des EPN (fictive)"@fr ;
+    d4w:activeEntity true .
+
+ex:le-numerinamur-jambes a legal:LegalEntity ;
+    dct:identifier "BE0123456789-J"@fr ;
+    legal:legalName "NumériNamur – antenne de Jambes"@fr ;
+    org:unitOf ex:le-numerinamur ;
+    d4w:activeEntity true .
+
+# -----------------------------------------------------------------------------
+#  Persons (person:Person requires exactly one dct:identifier and one gender)
+# -----------------------------------------------------------------------------
+ex:person-claire a person:Person ;
+    dct:identifier "P-0001"@fr ;
+    <http://xmlns.com/foaf/spec/#term_name> "Claire Dumont"@fr ;
+    foaf:givenName "Claire"@fr ;
+    foaf:familyName "Dumont"@fr ;
+    vcard:honorific-prefix "Mme" ;
+    m8g:gender concept:gender-female ;
+    m8g:birthDate "1984-06-15"^^xsd:date ;
+    dct:description "Coordinatrice des espaces publics numériques"@fr ,
+                    "Coordinator of public digital spaces"@en ;
+    d4w:expertise "Inclusion numérique, pédagogie pour adultes"@fr ;
+    d4w:slug "claire-dumont"@fr ;
+    d4w:language concept:lang-fr , concept:lang-en ;
+    d4w:category concept:cat-digital-inclusion ;
+    d4w:photo ex:asset-photo-claire ;
+    locn:address ex:address-hq ;
+    m8g:contactPoint ex:cp-claire ;
+    <https://w3c-cg.github.io/dpv/2.3/dpv/modules/legal_basis#vocab-legal-basis-consent-status> concept:consent-given ;
+    d4w:clientSite "digitalwallonia.be" .
+
+ex:person-marc a person:Person ;
+    dct:identifier "P-0002"@fr ;
+    foaf:givenName "Marc"@fr ;
+    foaf:familyName "Lambert"@fr ;
+    m8g:gender concept:gender-male ;
+    d4w:slug "marc-lambert"@fr .
+
+ex:person-journalist a person:Person ;
+    dct:identifier "P-0003"@fr ;
+    foaf:givenName "Sophie"@fr ;
+    foaf:familyName "Renard"@fr ;
+    m8g:gender concept:gender-female .
+
+# -----------------------------------------------------------------------------
+#  Qualified persons (a person in a role, attached to a profile)
+# -----------------------------------------------------------------------------
+ex:qp-claire a d4w:QualifiedPerson ;
+    d4w:role "Coordinatrice"@fr , "Coordinator"@en ;
+    d4w:department concept:dept-operations ;
+    d4w:shortDescription "Responsable du réseau d'EPN"@fr ;
+    d4w:hasProfile ex:profile-numerinamur .
+
+ex:qp-marc a d4w:QualifiedPerson ;
+    d4w:role "Animateur numérique"@fr ;
+    d4w:department concept:dept-operations ;
+    d4w:hasProfile ex:profile-numerinamur .
+
+ex:lep-claire a d4w:LegalEntityPerson ;
+    <http://www.w3.org/ns/person#Person> ex:person-claire ;
+    <http://www.w3.org/ns/legal#LegalEntity> ex:le-numerinamur ;
+    d4w:role "Administratrice déléguée"@fr ;
+    d4w:department concept:dept-operations ;
+    d4w:shortDescription "Mandat d'administratrice depuis 2020"@fr .
+
+# -----------------------------------------------------------------------------
+#  Profiles (every Profile requires exactly one dct:identifier)
+# -----------------------------------------------------------------------------
+ex:profile-numerinamur a d4w:Profile ;
+    dct:identifier "PRF-0001"@fr ;
+    d4w:title "NumériNamur"@fr , "NumériNamur"@en ;
+    d4w:shortTitle "NumNam"@fr ;
+    d4w:slug "numerinamur"@fr ;
+    d4w:shortDescription "Réseau namurois d'espaces publics numériques"@fr ,
+                         "Namur network of public digital spaces"@en ;
+    d4w:additionalDescription "Ateliers, permanences et accompagnement individuel."@fr ;
+    d4w:staffing "11-50"@fr ;
+    d4w:mainNACECode "85.599"@fr ;
+    d4w:companyValidationDate "2024-01-10"^^xsd:date ;
+    d4w:category concept:cat-digital-inclusion ;
+    d4w:address ex:address-hq ;
+    d4w:contactPoint ex:cp-numerinamur ;
+    d4w:logo ex:asset-logo ;
+    d4w:featuredPerson ex:qp-claire ;
+    d4w:nonFeaturedPerson ex:qp-marc ;
+    d4w:platformContactPerson ex:qp-claire ;
+    d4w:partner ex:profile-federation ;
+    d4w:incubator ex:profile-federation ;
+    d4w:founder ex:profile-federation ;
+    d4w:partnerAdditionalDescription ex:pad-federation ;
+    d4w:profileLegalEntity ex:ple-numerinamur ;
+    d4w:clientSite "digitalwallonia.be" .
+
+ex:profile-federation a d4w:Profile ;
+    dct:identifier "PRF-0002"@fr ;
+    d4w:title "Fédération wallonne des EPN (fictive)"@fr ;
+    d4w:slug "federation-epn"@fr .
+
+ex:profile-media a d4w:Profile ;
+    dct:identifier "PRF-0003"@fr ;
+    d4w:title "Le Quotidien Namurois (fictif)"@fr .
+
+ex:pad-federation a d4w:PartnerAdditionalDescription ;
+    d4w:title "Partenariat fédéral"@fr ;
+    d4w:additionalDescription "Mutualisation des formations d'animateurs."@fr ;
+    d4w:clientSite "digitalwallonia.be" .
+
+ex:ple-numerinamur a d4w:ProfileLegalEntity ;
+    d4w:profile ex:profile-numerinamur ;
+    d4w:legalEntity ex:le-numerinamur ;
+    d4w:role concept:role-coordinator ;
+    d4w:shortDescription "Entité juridique porteuse du profil"@fr .
+
+# -----------------------------------------------------------------------------
+#  Services place (requires exactly one additionalInformationOnOpeningHours)
+# -----------------------------------------------------------------------------
+ex:opening-hours-epn a time:TemporalEntity ;
+    dct:description "Du lundi au vendredi, 9h–17h"@fr , "Monday to Friday, 9am–5pm"@en .
+
+ex:cost-free a m8g:Cost ;
+    m8g:hasValue "0.0"^^xsd:double ;
+    m8g:currency concept:eur ;
+    d4w:price "Gratuit"@fr , "Free"@en .
+
+ex:cost-workshop a m8g:Cost ;
+    m8g:hasValue "5.0"^^xsd:double ;
+    m8g:currency concept:eur ;
+    d4w:price "5 € par participant"@fr .
+
+ex:sp-epn-jambes a d4w:ServicesPlace ;
+    d4w:title "EPN de Jambes"@fr , "Jambes public digital space"@en ;
+    d4w:slug "epn-jambes"@fr ;
+    d4w:shortDescription "Espace public numérique en accès libre"@fr ;
+    d4w:additionalDescription "12 postes, imprimante et scanner."@fr ;
+    d4w:additionalInformationOnOpeningHours "Fermé les jours fériés"@fr ;
+    d4w:additionalInformationOnEquipment "PC portables disponibles en prêt"@fr ;
+    d4w:additionalInformationOnSupport "Aide aux démarches en ligne sur rendez-vous"@fr ;
+    d4w:additionalTargetAudience "Seniors et demandeurs d'emploi"@fr ;
+    d4w:additionalTypeAndConditionOfAccess "Accès PMR"@fr ;
+    d4w:makingAppointment "Par téléphone ou par e-mail"@fr ;
+    d4w:capacity 12 ;
+    d4w:itinerant false ;
+    d4w:remoteAssistance true ;
+    d4w:operatingSystems "Windows" , "Linux" ;
+    d4w:category concept:cat-public-space ;
+    d4w:addresses ex:address-epn ;
+    d4w:accompanyingPerson ex:qp-marc ;
+    d4w:facadePhoto ex:asset-facade ;
+    m8g:otherPhoto ex:asset-inside ;
+    m8g:openingHours ex:opening-hours-epn ;
+    m8g:responsibleProfile ex:profile-numerinamur ;
+    m8g:partner ex:sp-epn-namur ;
+    d4w:hasCost ex:cost-free ;
+    d4w:clientSite "digitalwallonia.be" .
+
+ex:sp-epn-namur a d4w:ServicesPlace ;
+    d4w:title "EPN de Namur-Centre"@fr ;
+    d4w:additionalInformationOnOpeningHours "Horaires réduits en juillet-août"@fr .
+
+# -----------------------------------------------------------------------------
+#  Public events (require exactly one dct:identifier)
+# -----------------------------------------------------------------------------
+ex:event-workshop-1 a m8g:PublicEvent ;
+    dct:identifier "EVT-0001"@fr ;
+    dct:title "Atelier : sécuriser son smartphone"@fr , "Workshop: securing your smartphone"@en ;
+    d4w:slug "atelier-securiser-smartphone"@fr ;
+    d4w:type "workshop" ;
+    d4w:shortDescription "Les bons réflexes de cybersécurité au quotidien"@fr ;
+    d4w:additionalDescription "Apportez votre smartphone."@fr ;
+    m8g:audience "Grand public"@fr , "General public"@en ;
+    d4w:startDate "2026-12-10T14:00:00+01:00"^^xsd:dateTime ;
+    d4w:endDate   "2026-12-10T16:00:00+01:00"^^xsd:dateTime ;
+    d4w:endPublicationDate "2026-12-10T16:00:00+01:00"^^xsd:dateTime ;
+    d4w:scheduleNotSpecified false ;
+    d4w:scheduleAdditionalInformation "Accueil dès 13h45"@fr ;
+    d4w:category concept:cat-training ;
+    locn:address ex:address-epn ;
+    foaf:homepage ex:event-page ;
+    d4w:banner ex:asset-banner ;
+    d4w:hasCost ex:cost-workshop ;
+    d4w:organizer ex:profile-numerinamur ;
+    d4w:host ex:profile-numerinamur ;
+    d4w:partner ex:profile-federation ;
+    d4w:speaker ex:qp-marc ;
+    d4w:contactPerson ex:qp-claire ;
+    m8g:contactPoint ex:cp-numerinamur ;
+    m8g:hasNextEvent ex:event-workshop-2 ;
+    d4w:clientSite "digitalwallonia.be" .
+
+ex:event-workshop-2 a m8g:PublicEvent ;
+    dct:identifier "EVT-0002"@fr ;
+    dct:title "Atelier : sécuriser son smartphone (session 2)"@fr ;
+    d4w:startDate "2027-01-14T14:00:00+01:00"^^xsd:dateTime ;
+    d4w:endDate   "2027-01-14T16:00:00+01:00"^^xsd:dateTime .
+
+# -----------------------------------------------------------------------------
+#  Content: dynamic list, posts, press review
+# -----------------------------------------------------------------------------
+ex:cdl-beneficiaries a d4w:ContentDynamicList ;
+    d4w:title "Publics bénéficiaires"@fr , "Target beneficiaries"@en ;
+    d4w:field "Seniors" , "Demandeurs d'emploi" , "Étudiants" .
+
+ex:post-launch a d4w:Post ;
+    dct:identifier "PST-0001"@fr ;
+    d4w:title "Lancement du programme NumériNamur 2027"@fr ,
+              "Launch of the NumériNamur 2027 programme"@en ;
+    d4w:slug "lancement-numerinamur-2027"@fr ;
+    d4w:type "news" ;
+    d4w:introduction "Un nouveau cycle d'ateliers démarre en janvier."@fr ;
+    d4w:content "Le programme 2027 propose douze ateliers thématiques gratuits ou à prix réduit."@fr ;
+    d4w:publishedDate "2026-11-20T09:00:00+01:00"^^xsd:dateTime ;
+    d4w:estimatedReadingTime 3 ;
+    d4w:relatedExternalLinks "https://numerinamur.example/programme-2027"@fr ;
+    d4w:category concept:cat-digital-inclusion ;
+    d4w:author ex:qp-claire ;
+    d4w:relatedPerson ex:qp-marc ;
+    d4w:relatedProfile ex:profile-numerinamur ;
+    d4w:relatedEvent ex:event-workshop-1 ;
+    d4w:relatedPress ex:press-1 ;
+    d4w:relatedPost ex:post-previous ;
+    d4w:moreRecentPost ex:post-previous ;
+    d4w:dynamicList ex:cdl-beneficiaries ;
+    d4w:banner ex:asset-banner ;
+    d4w:pdfFile ex:asset-report ;
+    d4w:relatedFile ex:asset-report ;
+    d4w:clientSite "digitalwallonia.be" .
+
+ex:post-previous a d4w:Post ;
+    dct:identifier "PST-0002"@fr ;
+    d4w:title "Bilan des ateliers 2026"@fr ;
+    d4w:publishedDate "2026-10-05T10:00:00+02:00"^^xsd:dateTime .
+
+ex:press-1 a d4w:PressReview ;
+    dct:identifier "PRS-0001"@fr ;
+    d4w:title "Namur mise sur l'inclusion numérique"@fr ;
+    d4w:shortDescription "Article consacré au réseau d'EPN namurois"@fr ;
+    d4w:type "article" ;
+    d4w:language "fr"@fr ;
+    d4w:articleLink "https://quotidien-namurois.example/articles/inclusion-numerique" ;
+    d4w:publishedDate "2026-11-21T07:30:00+01:00"^^xsd:dateTime ;
+    d4w:category concept:cat-digital-inclusion ;
+    d4w:journalist ex:person-journalist ;
+    d4w:quotedPerson ex:qp-claire ;
+    d4w:quotedProfile ex:profile-numerinamur ;
+    d4w:source ex:profile-media ;
+    d4w:clientSite "digitalwallonia.be" .
+
+# -----------------------------------------------------------------------------
+#  Action plan, budgets and profile participation
+# -----------------------------------------------------------------------------
+ex:budget-2026 a d4w:AnnualBudget ;
+    d4w:internalName "Budget 2026" ;
+    d4w:year "2026"^^xsd:gYear ;
+    d4w:budget "45000.00"^^xsd:decimal .
+
+ex:budget-2027 a d4w:AnnualBudget ;
+    d4w:internalName "Budget 2027" ;
+    d4w:year "2027"^^xsd:gYear ;
+    d4w:budget "55000.00"^^xsd:decimal .
+
+ex:app-numerinamur a d4w:ActionPlanProfile ;
+    d4w:profile ex:profile-numerinamur ;          # exactly one profile required
+    d4w:actionPlan ex:ap-inclusion-2027 ;
+    d4w:role concept:role-coordinator ;
+    d4w:internalName "NumériNamur – porteur" ;
+    d4w:financialParticipation "20000.00"^^xsd:decimal .
+
+ex:app-federation a d4w:ActionPlanProfile ;
+    d4w:profile ex:profile-federation ;
+    d4w:actionPlan ex:ap-inclusion-2027 ;
+    d4w:role concept:role-partner ;
+    d4w:financialParticipation "5000.00"^^xsd:decimal .
+
+ex:ap-inclusion-2027 a d4w:ActionPlan ;
+    dct:identifier "AP-2027-001"@fr ;
+    d4w:title "Plan d'inclusion numérique Namur 2026-2027"@fr ,
+              "Namur digital inclusion plan 2026-2027"@en ;
+    d4w:marketingTitle "Namur, tous connectés !"@fr ;
+    d4w:slug "plan-inclusion-numerique-namur"@fr ;
+    d4w:type "programme" ;
+    d4w:shortDescription "Former 1 000 citoyens aux usages numériques essentiels"@fr ;
+    d4w:marketingShortDescription "Le numérique pour tous, près de chez vous"@fr ;
+    d4w:additionalDescription "Plan cofinancé par la Région wallonne."@fr ;
+    d4w:progressStatus "En cours"@fr , "In progress"@en ;
+    d4w:walloonRegionConventionNumber "CONV-2026-0420"@fr ;
+    d4w:idForAccounting "ACC-77821" ;
+    d4w:leaderMission "Coordination générale et suivi des indicateurs" ;
+    d4w:startDate "2026-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    d4w:endDate   "2027-12-31T23:59:59+01:00"^^xsd:dateTime ;
+    d4w:inOperation true ;
+    d4w:totalBudget "100000.00"^^xsd:decimal ;
+    d4w:totalWalloonBudget "75000.00"^^xsd:decimal ;
+    d4w:annualBudgetAllocation ex:budget-2026 , ex:budget-2027 ;
+    d4w:fullTimeEquivalent 3 ;
+    d4w:numberOfBeneficiaries 1000 ;
+    d4w:numberOfAttendees 420 ;
+    d4w:numberOfEquipment 24 ;
+    d4w:numberOfOccurrences 12 ;
+    d4w:beneficiaries ex:cdl-beneficiaries ;
+    d4w:category concept:cat-digital-inclusion ;
+    d4w:referenceCategory concept:cat-training ;
+    d4w:actionPlanProfile ex:app-numerinamur , ex:app-federation ;
+    d4w:projectHolder ex:qp-claire ;
+    d4w:contactPerson ex:qp-claire ;
+    d4w:participant ex:qp-marc ;
+    d4w:contactPoint ex:cp-numerinamur ;
+    d4w:occurrence ex:event-workshop-1 , ex:event-workshop-2 ;
+    d4w:referenceEvent ex:event-workshop-1 ;
+    d4w:referencePost ex:post-launch ;
+    d4w:referenceActionPlan ex:ap-inclusion-2025 ;
+    d4w:image ex:asset-banner ;
+    d4w:relatedFile ex:asset-report ;
+    d4w:clientSite "digitalwallonia.be" .
+
+ex:ap-inclusion-2025 a d4w:ActionPlan ;
+    dct:identifier "AP-2025-001"@fr ;
+    d4w:title "Plan d'inclusion numérique Namur 2024-2025"@fr ;
+    d4w:inOperation false .

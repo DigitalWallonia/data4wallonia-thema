@@ -1,0 +1,1737 @@
+{
+  "@context": [
+    "https://raw.githubusercontent.com/DigitalWallonia/data4wallonia-generated/refs/heads/draft/D4WMO-Generic/releases/1.0.2/context/d4wmo-generic.jsonld",
+    {
+      "adms": "http://www.w3.org/ns/adms#",
+      "concept": "https://data.example.be/d4w/concept/",
+      "d4w": "https://interoperability.digitalwallonia.be/uri/D4WMO-Generic/",
+      "ex": "https://data.example.be/d4w/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ex:ap-inclusion-2025",
+      "@type": "ActionPlan",
+      "id": {
+        "@value": "AP-2025-001",
+        "@language": "fr"
+      },
+      "inOperation": [
+        false
+      ],
+      "ActionPlan.title": [
+        {
+          "@value": "Plan d'inclusion numérique Namur 2024-2025",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:ap-inclusion-2027",
+      "@type": "ActionPlan",
+      "id": {
+        "@value": "AP-2027-001",
+        "@language": "fr"
+      },
+      "actionPlanProfile": [
+        "ex:app-federation",
+        "ex:app-numerinamur"
+      ],
+      "additionalDescription": [
+        {
+          "@value": "Plan cofinancé par la Région wallonne.",
+          "@language": "fr"
+        }
+      ],
+      "annualBudgetAllocation": [
+        "ex:budget-2026",
+        "ex:budget-2027"
+      ],
+      "beneficiaries": [
+        "ex:cdl-beneficiaries"
+      ],
+      "category": [
+        "concept:cat-digital-inclusion"
+      ],
+      "clientSite": [
+        "digitalwallonia.be"
+      ],
+      "contactPerson": [
+        "ex:qp-claire"
+      ],
+      "d4w:contactPoint": {
+        "@id": "ex:cp-numerinamur"
+      },
+      "endDate": [
+        "2027-12-31T23:59:59+01:00"
+      ],
+      "fullTimeEquivalent": [
+        3
+      ],
+      "idForAccounting": [
+        "ACC-77821"
+      ],
+      "image": [
+        "ex:asset-banner"
+      ],
+      "inOperation": [
+        true
+      ],
+      "leaderMission": [
+        "Coordination générale et suivi des indicateurs"
+      ],
+      "marketingShortDescription": [
+        {
+          "@value": "Le numérique pour tous, près de chez vous",
+          "@language": "fr"
+        }
+      ],
+      "marketingTitle": [
+        {
+          "@value": "Namur, tous connectés !",
+          "@language": "fr"
+        }
+      ],
+      "numberOfAttendees": [
+        420
+      ],
+      "numberOfBeneficiaries": [
+        1000
+      ],
+      "numberOfEquipment": [
+        24
+      ],
+      "numberOfOccurrences": [
+        12
+      ],
+      "occurrence": [
+        "ex:event-workshop-1",
+        "ex:event-workshop-2"
+      ],
+      "participant": [
+        "ex:qp-marc"
+      ],
+      "progressStatus": [
+        {
+          "@value": "In progress",
+          "@language": "en"
+        },
+        {
+          "@value": "En cours",
+          "@language": "fr"
+        }
+      ],
+      "projectHolder": [
+        "ex:qp-claire"
+      ],
+      "referenceActionPlan": [
+        "ex:ap-inclusion-2025"
+      ],
+      "referenceCategory": [
+        "concept:cat-training"
+      ],
+      "referenceEvent": [
+        "ex:event-workshop-1"
+      ],
+      "referencePost": [
+        "ex:post-launch"
+      ],
+      "relatedFile": [
+        "ex:asset-report"
+      ],
+      "ActionPlan.shortDescription": [
+        {
+          "@value": "Former 1 000 citoyens aux usages numériques essentiels",
+          "@language": "fr"
+        }
+      ],
+      "slug": [
+        {
+          "@value": "plan-inclusion-numerique-namur",
+          "@language": "fr"
+        }
+      ],
+      "startDate": [
+        "2026-01-01T00:00:00+01:00"
+      ],
+      "ActionPlan.title": [
+        {
+          "@value": "Namur digital inclusion plan 2026-2027",
+          "@language": "en"
+        },
+        {
+          "@value": "Plan d'inclusion numérique Namur 2026-2027",
+          "@language": "fr"
+        }
+      ],
+      "totalBudget": [
+        "100000.00"
+      ],
+      "totalWalloonBudget": [
+        "75000.00"
+      ],
+      "type": [
+        "programme"
+      ],
+      "walloonRegionConventionNumber": [
+        {
+          "@value": "CONV-2026-0420",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:app-federation",
+      "@type": "ActionPlanProfile",
+      "actionPlan": [
+        "ex:ap-inclusion-2027"
+      ],
+      "financialParticipation": [
+        "5000.00"
+      ],
+      "profile": [
+        "ex:profile-federation"
+      ],
+      "role": [
+        {
+          "@id": "concept:role-partner"
+        }
+      ]
+    },
+    {
+      "@id": "ex:app-numerinamur",
+      "@type": "ActionPlanProfile",
+      "actionPlan": [
+        "ex:ap-inclusion-2027"
+      ],
+      "financialParticipation": [
+        "20000.00"
+      ],
+      "ActionPlanProfile.internalName": [
+        "NumériNamur – porteur"
+      ],
+      "profile": [
+        "ex:profile-numerinamur"
+      ],
+      "role": [
+        {
+          "@id": "concept:role-coordinator"
+        }
+      ]
+    },
+    {
+      "@id": "ex:budget-2026",
+      "@type": "AnnualBudget",
+      "budget": [
+        "45000.00"
+      ],
+      "AnnualBudget.internalName": [
+        "Budget 2026"
+      ],
+      "year": [
+        "2026"
+      ]
+    },
+    {
+      "@id": "ex:budget-2027",
+      "@type": "AnnualBudget",
+      "budget": [
+        "55000.00"
+      ],
+      "AnnualBudget.internalName": [
+        "Budget 2027"
+      ],
+      "year": [
+        "2027"
+      ]
+    },
+    {
+      "@id": "ex:profile-federation",
+      "@type": "Profile",
+      "id": {
+        "@value": "PRF-0002",
+        "@language": "fr"
+      },
+      "slug": [
+        {
+          "@value": "federation-epn",
+          "@language": "fr"
+        }
+      ],
+      "Profile.title": [
+        {
+          "@value": "Fédération wallonne des EPN (fictive)",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:profile-media",
+      "@type": "Profile",
+      "id": {
+        "@value": "PRF-0003",
+        "@language": "fr"
+      },
+      "Profile.title": [
+        {
+          "@value": "Le Quotidien Namurois (fictif)",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:profile-numerinamur",
+      "@type": "Profile",
+      "id": {
+        "@value": "PRF-0001",
+        "@language": "fr"
+      },
+      "additionalDescription": [
+        {
+          "@value": "Ateliers, permanences et accompagnement individuel.",
+          "@language": "fr"
+        }
+      ],
+      "Profile.address": [
+        "ex:address-hq"
+      ],
+      "category": [
+        "concept:cat-digital-inclusion"
+      ],
+      "clientSite": [
+        "digitalwallonia.be"
+      ],
+      "companyValidationDate": [
+        "2024-01-10"
+      ],
+      "d4w:contactPoint": {
+        "@id": "ex:cp-numerinamur"
+      },
+      "featuredPerson": [
+        "ex:qp-claire"
+      ],
+      "founder": [
+        "ex:profile-federation"
+      ],
+      "incubator": [
+        "ex:profile-federation"
+      ],
+      "logo": [
+        "ex:asset-logo"
+      ],
+      "mainNACECode": [
+        {
+          "@value": "85.599",
+          "@language": "fr"
+        }
+      ],
+      "nonFeaturedPerson": [
+        "ex:qp-marc"
+      ],
+      "Profile.partner": [
+        "ex:profile-federation"
+      ],
+      "partnerAdditionalDescription": [
+        "ex:pad-federation"
+      ],
+      "platformContactPerson": [
+        "ex:qp-claire"
+      ],
+      "profileLegalEntity": [
+        "ex:ple-numerinamur"
+      ],
+      "Profile.shortDescription": [
+        {
+          "@value": "Namur network of public digital spaces",
+          "@language": "en"
+        },
+        {
+          "@value": "Réseau namurois d'espaces publics numériques",
+          "@language": "fr"
+        }
+      ],
+      "shortTitle": [
+        {
+          "@value": "NumNam",
+          "@language": "fr"
+        }
+      ],
+      "slug": [
+        {
+          "@value": "numerinamur",
+          "@language": "fr"
+        }
+      ],
+      "staffing": [
+        {
+          "@value": "11-50",
+          "@language": "fr"
+        }
+      ],
+      "Profile.title": [
+        {
+          "@value": "NumériNamur",
+          "@language": "en"
+        },
+        {
+          "@value": "NumériNamur",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:ple-numerinamur",
+      "@type": "ProfileLegalEntity",
+      "legalEntity": [
+        "ex:le-numerinamur"
+      ],
+      "profile": [
+        "ex:profile-numerinamur"
+      ],
+      "role": [
+        {
+          "@id": "concept:role-coordinator"
+        }
+      ],
+      "ProfileLegalEntity.shortDescription": [
+        {
+          "@value": "Entité juridique porteuse du profil",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:pad-federation",
+      "@type": "PartnerAdditionalDescription",
+      "additionalDescription": [
+        {
+          "@value": "Mutualisation des formations d'animateurs.",
+          "@language": "fr"
+        }
+      ],
+      "clientSite": [
+        "digitalwallonia.be"
+      ],
+      "PartnerAdditionalDescription.title": [
+        {
+          "@value": "Partenariat fédéral",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:le-federation",
+      "@type": "LegalEntity",
+      "id": {
+        "@value": "BE0987654321",
+        "@language": "fr"
+      },
+      "legalName": [
+        {
+          "@value": "Fédération wallonne des EPN (fictive)",
+          "@language": "fr"
+        }
+      ],
+      "activeEntity": [
+        true
+      ]
+    },
+    {
+      "@id": "ex:le-numerinamur",
+      "@type": "LegalEntity",
+      "registeredAddress": [
+        "ex:address-hq"
+      ],
+      "registrationDate": [
+        "2015-03-02"
+      ],
+      "alternativeName": [
+        {
+          "@value": "NumériNamur",
+          "@language": "fr"
+        }
+      ],
+      "id": {
+        "@value": "BE0123456789",
+        "@language": "fr"
+      },
+      "identifier": [
+        "ex:id-bce-numerinamur"
+      ],
+      "legalName": [
+        {
+          "@value": "NumériNamur ASBL",
+          "@language": "fr"
+        }
+      ],
+      "legalEntityActivity": [
+        "concept:nace-85599"
+      ],
+      "classification": [
+        "concept:org-nonprofit"
+      ],
+      "establishmentNumber": [
+        "0123.456.789"
+      ],
+      "memberOf": [
+        "ex:le-federation"
+      ],
+      "VATNumber": [
+        {
+          "@value": "BE0123456789",
+          "@language": "fr"
+        }
+      ],
+      "activeEntity": [
+        true
+      ],
+      "activityDescription": [
+        {
+          "@value": "Digital skills training and support",
+          "@language": "en"
+        },
+        {
+          "@value": "Formation et accompagnement aux usages numériques",
+          "@language": "fr"
+        }
+      ],
+      "clientSite": [
+        "digitalwallonia.be"
+      ],
+      "d4w:contactPoint": {
+        "@id": "ex:cp-numerinamur"
+      },
+      "liableToVAT": false,
+      "logo": [
+        "ex:asset-logo"
+      ],
+      "mainNACECode": [
+        {
+          "@value": "85.599",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:le-numerinamur-jambes",
+      "@type": "LegalEntity",
+      "id": {
+        "@value": "BE0123456789-J",
+        "@language": "fr"
+      },
+      "legalName": [
+        {
+          "@value": "NumériNamur – antenne de Jambes",
+          "@language": "fr"
+        }
+      ],
+      "unitOf": [
+        "ex:le-numerinamur"
+      ],
+      "activeEntity": [
+        true
+      ]
+    },
+    {
+      "@id": "ex:id-bce-numerinamur",
+      "@type": "Identifier",
+      "schemeURI": [
+        "https://kbopub.economie.fgov.be/"
+      ],
+      "dateOfIssue": [
+        "2015-03-02"
+      ],
+      "schemeName": [
+        {
+          "@value": "Belgian company number",
+          "@language": "en"
+        },
+        {
+          "@value": "Numéro d'entreprise BCE",
+          "@language": "fr"
+        }
+      ],
+      "notation": [
+        "0123.456.789"
+      ],
+      "schemaAgency": [
+        "Banque-Carrefour des Entreprises"
+      ]
+    },
+    {
+      "@id": "ex:lep-claire",
+      "@type": "LegalEntityPerson",
+      "hasLegalEntity": [
+        "ex:le-numerinamur"
+      ],
+      "hasPerson": [
+        "ex:person-claire"
+      ],
+      "department": [
+        "concept:dept-operations"
+      ],
+      "role": [
+        {
+          "@value": "Administratrice déléguée",
+          "@language": "fr"
+        }
+      ],
+      "LegalEntityPerson.shortDescription": [
+        {
+          "@value": "Mandat d'administratrice depuis 2020",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:person-claire",
+      "@type": "Person",
+      "dateOfBirth": [
+        "1984-06-15"
+      ],
+      "contactPoint": [
+        "ex:cp-claire"
+      ],
+      "gender": "concept:gender-female",
+      "Person.shortDescription": [
+        {
+          "@value": "Coordinator of public digital spaces",
+          "@language": "en"
+        },
+        {
+          "@value": "Coordinatrice des espaces publics numériques",
+          "@language": "fr"
+        }
+      ],
+      "id": {
+        "@value": "P-0001",
+        "@language": "fr"
+      },
+      "honorificPrefix": [
+        "Mme"
+      ],
+      "Person.address": [
+        "ex:address-hq"
+      ],
+      "familyName": [
+        {
+          "@value": "Dumont",
+          "@language": "fr"
+        }
+      ],
+      "givenName": [
+        {
+          "@value": "Claire",
+          "@language": "fr"
+        }
+      ],
+      "fullname": [
+        {
+          "@value": "Claire Dumont",
+          "@language": "fr"
+        }
+      ],
+      "category": [
+        "concept:cat-digital-inclusion"
+      ],
+      "clientSite": [
+        "digitalwallonia.be"
+      ],
+      "expertise": [
+        {
+          "@value": "Inclusion numérique, pédagogie pour adultes",
+          "@language": "fr"
+        }
+      ],
+      "language": [
+        "concept:lang-en",
+        "concept:lang-fr"
+      ],
+      "photo": [
+        "ex:asset-photo-claire"
+      ],
+      "slug": [
+        {
+          "@value": "claire-dumont",
+          "@language": "fr"
+        }
+      ],
+      "consentStatus": [
+        "concept:consent-given"
+      ]
+    },
+    {
+      "@id": "ex:person-journalist",
+      "@type": "Person",
+      "gender": "concept:gender-female",
+      "id": {
+        "@value": "P-0003",
+        "@language": "fr"
+      },
+      "familyName": [
+        {
+          "@value": "Renard",
+          "@language": "fr"
+        }
+      ],
+      "givenName": [
+        {
+          "@value": "Sophie",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:person-marc",
+      "@type": "Person",
+      "gender": "concept:gender-male",
+      "id": {
+        "@value": "P-0002",
+        "@language": "fr"
+      },
+      "familyName": [
+        {
+          "@value": "Lambert",
+          "@language": "fr"
+        }
+      ],
+      "givenName": [
+        {
+          "@value": "Marc",
+          "@language": "fr"
+        }
+      ],
+      "slug": [
+        {
+          "@value": "marc-lambert",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:qp-claire",
+      "@type": "QualifiedPerson",
+      "department": [
+        "concept:dept-operations"
+      ],
+      "hasProfile": [
+        "ex:profile-numerinamur"
+      ],
+      "role": [
+        {
+          "@value": "Coordinator",
+          "@language": "en"
+        },
+        {
+          "@value": "Coordinatrice",
+          "@language": "fr"
+        }
+      ],
+      "QualifiedPerson.shortDescription": [
+        {
+          "@value": "Responsable du réseau d'EPN",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:qp-marc",
+      "@type": "QualifiedPerson",
+      "department": [
+        "concept:dept-operations"
+      ],
+      "hasProfile": [
+        "ex:profile-numerinamur"
+      ],
+      "role": [
+        {
+          "@value": "Animateur numérique",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:cp-claire",
+      "@type": "ContactPoint",
+      "hasEmail": [
+        "claire.dumont@numerinamur.example"
+      ],
+      "hasTelephone": [
+        "+32 470 00 00 01"
+      ],
+      "id": {
+        "@value": "CP-0002",
+        "@language": "fr"
+      },
+      "contactType": [
+        "personal"
+      ]
+    },
+    {
+      "@id": "ex:cp-numerinamur",
+      "@type": "ContactPoint",
+      "contactPage": [
+        "ex:contact-page"
+      ],
+      "hasEmail": [
+        "info@numerinamur.example"
+      ],
+      "hasTelephone": [
+        "+32 81 00 00 00"
+      ],
+      "id": {
+        "@value": "CP-0001",
+        "@language": "fr"
+      },
+      "hasPrivateEmail": [
+        "direction@numerinamur.example"
+      ],
+      "socialNetwork": [
+        "https://www.linkedin.com/company/numerinamur-example"
+      ],
+      "website": [
+        "https://numerinamur.example"
+      ],
+      "contactType": [
+        "general"
+      ]
+    },
+    {
+      "@id": "ex:address-epn",
+      "@type": "Address",
+      "adminUnitL1": [
+        {
+          "@value": "Belgique",
+          "@language": "fr"
+        }
+      ],
+      "adminUnitL2": [
+        {
+          "@value": "Province de Namur",
+          "@language": "fr"
+        }
+      ],
+      "fullAdress": [
+        {
+          "@value": "Avenue Fictive 3, 5100 Jambes, Belgique",
+          "@language": "fr"
+        }
+      ],
+      "locatorDesignator": [
+        "3"
+      ],
+      "postCode": [
+        "5100"
+      ],
+      "postName": [
+        {
+          "@value": "Jambes",
+          "@language": "fr"
+        }
+      ],
+      "thoroughfare": [
+        {
+          "@value": "Avenue Fictive",
+          "@language": "fr"
+        }
+      ],
+      "continent": [
+        "concept:europe"
+      ]
+    },
+    {
+      "@id": "ex:address-hq",
+      "@type": "Address",
+      "adminUnitL1": [
+        {
+          "@value": "Belgium",
+          "@language": "en"
+        },
+        {
+          "@value": "Belgique",
+          "@language": "fr"
+        }
+      ],
+      "adminUnitL2": [
+        {
+          "@value": "Province de Namur",
+          "@language": "fr"
+        }
+      ],
+      "fullAdress": [
+        {
+          "@value": "Rue de l'Exemple 12, 5000 Namur, Belgium",
+          "@language": "en"
+        },
+        {
+          "@value": "Rue de l'Exemple 12, 5000 Namur, Belgique",
+          "@language": "fr"
+        }
+      ],
+      "locatorDesignator": [
+        "12"
+      ],
+      "locatorName": [
+        {
+          "@value": "Bâtiment A",
+          "@language": "fr"
+        }
+      ],
+      "postCode": [
+        "5000"
+      ],
+      "postName": [
+        {
+          "@value": "Namur",
+          "@language": "fr"
+        }
+      ],
+      "thoroughfare": [
+        {
+          "@value": "Rue de l'Exemple",
+          "@language": "fr"
+        }
+      ],
+      "continent": [
+        "concept:europe"
+      ]
+    },
+    {
+      "@id": "ex:geometry-epn",
+      "@type": "Geometry",
+      "latitude": [
+        "50.4560"
+      ],
+      "longitude": [
+        "4.8740"
+      ]
+    },
+    {
+      "@id": "ex:sp-epn-jambes",
+      "@type": "ServicesPlace",
+      "openingHours": [
+        "ex:opening-hours-epn"
+      ],
+      "otherPhoto": [
+        "ex:asset-inside"
+      ],
+      "ServicesPlace.partner": [
+        "ex:sp-epn-namur"
+      ],
+      "responsibleProfile": [
+        "ex:profile-numerinamur"
+      ],
+      "accompanyingPerson": [
+        "ex:qp-marc"
+      ],
+      "additionalDescription": [
+        {
+          "@value": "12 postes, imprimante et scanner.",
+          "@language": "fr"
+        }
+      ],
+      "additionalInformationOnEquipment": [
+        {
+          "@value": "PC portables disponibles en prêt",
+          "@language": "fr"
+        }
+      ],
+      "additionalInformationOnOpeningHours": {
+        "@value": "Fermé les jours fériés",
+        "@language": "fr"
+      },
+      "additionalInformationOnSupport": [
+        {
+          "@value": "Aide aux démarches en ligne sur rendez-vous",
+          "@language": "fr"
+        }
+      ],
+      "additionalTargetAudience": [
+        {
+          "@value": "Seniors et demandeurs d'emploi",
+          "@language": "fr"
+        }
+      ],
+      "additionalTypeAndConditionOfAccess": [
+        {
+          "@value": "Accès PMR",
+          "@language": "fr"
+        }
+      ],
+      "addresses": [
+        "ex:address-epn"
+      ],
+      "capacity": [
+        12
+      ],
+      "category": [
+        "concept:cat-public-space"
+      ],
+      "clientSite": [
+        "digitalwallonia.be"
+      ],
+      "facadePhoto": [
+        "ex:asset-facade"
+      ],
+      "hasCost": [
+        "ex:cost-free"
+      ],
+      "itinerant": [
+        false
+      ],
+      "makingAppointment": [
+        {
+          "@value": "Par téléphone ou par e-mail",
+          "@language": "fr"
+        }
+      ],
+      "operatingSystems": [
+        "Linux",
+        "Windows"
+      ],
+      "remoteAssistance": [
+        true
+      ],
+      "ServicesPlace.shortDescription": [
+        {
+          "@value": "Espace public numérique en accès libre",
+          "@language": "fr"
+        }
+      ],
+      "slug": [
+        {
+          "@value": "epn-jambes",
+          "@language": "fr"
+        }
+      ],
+      "ServicesPlace.title": [
+        {
+          "@value": "Jambes public digital space",
+          "@language": "en"
+        },
+        {
+          "@value": "EPN de Jambes",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:sp-epn-namur",
+      "@type": "ServicesPlace",
+      "additionalInformationOnOpeningHours": {
+        "@value": "Horaires réduits en juillet-août",
+        "@language": "fr"
+      },
+      "ServicesPlace.title": [
+        {
+          "@value": "EPN de Namur-Centre",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:opening-hours-epn",
+      "@type": "TemporalEntity",
+      "TemporalEntity.description": [
+        {
+          "@value": "Monday to Friday, 9am–5pm",
+          "@language": "en"
+        },
+        {
+          "@value": "Du lundi au vendredi, 9h–17h",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:cost-free",
+      "@type": "Cost",
+      "currency": [
+        "concept:eur"
+      ],
+      "value": [
+        "0.0"
+      ],
+      "price": [
+        {
+          "@value": "Free",
+          "@language": "en"
+        },
+        {
+          "@value": "Gratuit",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:cost-workshop",
+      "@type": "Cost",
+      "currency": [
+        "concept:eur"
+      ],
+      "value": [
+        "5.0"
+      ],
+      "price": [
+        {
+          "@value": "5 € par participant",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:event-workshop-1",
+      "@type": "PublicEvent",
+      "audience": [
+        {
+          "@value": "General public",
+          "@language": "en"
+        },
+        {
+          "@value": "Grand public",
+          "@language": "fr"
+        }
+      ],
+      "contactPoint": [
+        "ex:cp-numerinamur"
+      ],
+      "hasNextEvent": [
+        "ex:event-workshop-2"
+      ],
+      "id": {
+        "@value": "EVT-0001",
+        "@language": "fr"
+      },
+      "PublicEvent.title": [
+        {
+          "@value": "Workshop: securing your smartphone",
+          "@language": "en"
+        },
+        {
+          "@value": "Atelier : sécuriser son smartphone",
+          "@language": "fr"
+        }
+      ],
+      "PublicEvent.address": [
+        "ex:address-epn"
+      ],
+      "homepage": [
+        "ex:event-page"
+      ],
+      "additionalDescription": [
+        {
+          "@value": "Apportez votre smartphone.",
+          "@language": "fr"
+        }
+      ],
+      "banner": [
+        "ex:asset-banner"
+      ],
+      "category": [
+        "concept:cat-training"
+      ],
+      "clientSite": [
+        "digitalwallonia.be"
+      ],
+      "contactPerson": [
+        "ex:qp-claire"
+      ],
+      "endDate": [
+        "2026-12-10T16:00:00+01:00"
+      ],
+      "endPublicationDate": [
+        "2026-12-10T16:00:00+01:00"
+      ],
+      "hasCost": [
+        "ex:cost-workshop"
+      ],
+      "host": [
+        "ex:profile-numerinamur"
+      ],
+      "organizer": [
+        "ex:profile-numerinamur"
+      ],
+      "PublicEvent.partner": [
+        "ex:profile-federation"
+      ],
+      "scheduleAdditionalInformation": [
+        {
+          "@value": "Accueil dès 13h45",
+          "@language": "fr"
+        }
+      ],
+      "scheduleNotSpecified": [
+        false
+      ],
+      "PublicEvent.shortDescription": [
+        {
+          "@value": "Les bons réflexes de cybersécurité au quotidien",
+          "@language": "fr"
+        }
+      ],
+      "slug": [
+        {
+          "@value": "atelier-securiser-smartphone",
+          "@language": "fr"
+        }
+      ],
+      "speaker": [
+        "ex:qp-marc"
+      ],
+      "startDate": [
+        "2026-12-10T14:00:00+01:00"
+      ],
+      "type": [
+        "workshop"
+      ]
+    },
+    {
+      "@id": "ex:event-workshop-2",
+      "@type": "PublicEvent",
+      "id": {
+        "@value": "EVT-0002",
+        "@language": "fr"
+      },
+      "PublicEvent.title": [
+        {
+          "@value": "Atelier : sécuriser son smartphone (session 2)",
+          "@language": "fr"
+        }
+      ],
+      "endDate": [
+        "2027-01-14T16:00:00+01:00"
+      ],
+      "startDate": [
+        "2027-01-14T14:00:00+01:00"
+      ]
+    },
+    {
+      "@id": "ex:post-launch",
+      "@type": "Post",
+      "id": {
+        "@value": "PST-0001",
+        "@language": "fr"
+      },
+      "author": [
+        "ex:qp-claire"
+      ],
+      "banner": [
+        "ex:asset-banner"
+      ],
+      "category": [
+        "concept:cat-digital-inclusion"
+      ],
+      "clientSite": [
+        "digitalwallonia.be"
+      ],
+      "content": [
+        {
+          "@value": "Le programme 2027 propose douze ateliers thématiques gratuits ou à prix réduit.",
+          "@language": "fr"
+        }
+      ],
+      "dynamicList": [
+        "ex:cdl-beneficiaries"
+      ],
+      "estimatedReadingTime": [
+        3
+      ],
+      "introduction": [
+        {
+          "@value": "Un nouveau cycle d'ateliers démarre en janvier.",
+          "@language": "fr"
+        }
+      ],
+      "moreRecentPost": [
+        "ex:post-previous"
+      ],
+      "pdfFile": [
+        "ex:asset-report"
+      ],
+      "publishedDate": [
+        "2026-11-20T09:00:00+01:00"
+      ],
+      "relatedEvent": [
+        "ex:event-workshop-1"
+      ],
+      "relatedExternalLinks": [
+        {
+          "@value": "https://numerinamur.example/programme-2027",
+          "@language": "fr"
+        }
+      ],
+      "relatedFile": [
+        "ex:asset-report"
+      ],
+      "relatedPerson": [
+        "ex:qp-marc"
+      ],
+      "relatedPost": [
+        "ex:post-previous"
+      ],
+      "relatedPress": [
+        "ex:press-1"
+      ],
+      "relatedProfile": [
+        "ex:profile-numerinamur"
+      ],
+      "slug": [
+        {
+          "@value": "lancement-numerinamur-2027",
+          "@language": "fr"
+        }
+      ],
+      "Post.title": [
+        {
+          "@value": "Launch of the NumériNamur 2027 programme",
+          "@language": "en"
+        },
+        {
+          "@value": "Lancement du programme NumériNamur 2027",
+          "@language": "fr"
+        }
+      ],
+      "type": [
+        "news"
+      ]
+    },
+    {
+      "@id": "ex:post-previous",
+      "@type": "Post",
+      "id": {
+        "@value": "PST-0002",
+        "@language": "fr"
+      },
+      "publishedDate": [
+        "2026-10-05T10:00:00+02:00"
+      ],
+      "Post.title": [
+        {
+          "@value": "Bilan des ateliers 2026",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:press-1",
+      "@type": "PressReview",
+      "id": {
+        "@value": "PRS-0001",
+        "@language": "fr"
+      },
+      "articleLink": [
+        "https://quotidien-namurois.example/articles/inclusion-numerique"
+      ],
+      "category": [
+        "concept:cat-digital-inclusion"
+      ],
+      "clientSite": [
+        "digitalwallonia.be"
+      ],
+      "journalist": [
+        "ex:person-journalist"
+      ],
+      "language": [
+        {
+          "@value": "fr",
+          "@language": "fr"
+        }
+      ],
+      "publishedDate": [
+        "2026-11-21T07:30:00+01:00"
+      ],
+      "quotedPerson": [
+        "ex:qp-claire"
+      ],
+      "quotedProfile": [
+        "ex:profile-numerinamur"
+      ],
+      "PressReview.shortDescription": [
+        {
+          "@value": "Article consacré au réseau d'EPN namurois",
+          "@language": "fr"
+        }
+      ],
+      "source": [
+        "ex:profile-media"
+      ],
+      "PressReview.title": [
+        {
+          "@value": "Namur mise sur l'inclusion numérique",
+          "@language": "fr"
+        }
+      ],
+      "type": [
+        "article"
+      ]
+    },
+    {
+      "@id": "ex:cdl-beneficiaries",
+      "@type": "ContentDynamicList",
+      "field": [
+        "Demandeurs d'emploi",
+        "Seniors",
+        "Étudiants"
+      ],
+      "ContentDynamicList.title": [
+        {
+          "@value": "Target beneficiaries",
+          "@language": "en"
+        },
+        {
+          "@value": "Publics bénéficiaires",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:asset-banner",
+      "@type": [
+        "adms:Asset",
+        "Asset"
+      ],
+      "Asset.title": [
+        {
+          "@value": "Bannière atelier",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:asset-facade",
+      "@type": [
+        "adms:Asset",
+        "Asset"
+      ],
+      "Asset.title": [
+        {
+          "@value": "Front of the Jambes public digital space",
+          "@language": "en"
+        },
+        {
+          "@value": "Façade de l'EPN de Jambes",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:asset-inside",
+      "@type": [
+        "adms:Asset",
+        "Asset"
+      ],
+      "Asset.title": [
+        {
+          "@value": "Salle informatique",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:asset-logo",
+      "@type": [
+        "adms:Asset",
+        "Asset"
+      ],
+      "Asset.description": [
+        {
+          "@value": "Logo officiel de l'ASBL",
+          "@language": "fr"
+        }
+      ],
+      "file": [
+        "ex:file-logo"
+      ],
+      "Asset.title": [
+        {
+          "@value": "NumériNamur logo",
+          "@language": "en"
+        },
+        {
+          "@value": "Logo NumériNamur",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:asset-photo-claire",
+      "@type": [
+        "adms:Asset",
+        "Asset"
+      ],
+      "file": [
+        "ex:file-photo"
+      ],
+      "Asset.title": [
+        {
+          "@value": "Photo de profil – Claire Dumont",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:asset-report",
+      "@type": [
+        "adms:Asset",
+        "Asset"
+      ],
+      "Asset.description": [
+        {
+          "@value": "Rapport annuel au format PDF",
+          "@language": "fr"
+        }
+      ],
+      "file": [
+        "ex:file-pdf"
+      ],
+      "Asset.title": [
+        {
+          "@value": "2025 activity report",
+          "@language": "en"
+        },
+        {
+          "@value": "Rapport d'activités 2025",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "ex:file-logo",
+      "@type": "File"
+    },
+    {
+      "@id": "ex:file-pdf",
+      "@type": "File"
+    },
+    {
+      "@id": "ex:file-photo",
+      "@type": "File"
+    },
+    {
+      "@id": "ex:contact-page",
+      "@type": "Document"
+    },
+    {
+      "@id": "ex:event-page",
+      "@type": "Document"
+    },
+    {
+      "@id": "ex:homepage-numerinamur",
+      "@type": "Document"
+    },
+    {
+      "@id": "concept:cat-digital-inclusion",
+      "@type": "Code",
+      "skos:prefLabel": [
+        {
+          "@value": "Digital inclusion",
+          "@language": "en"
+        },
+        {
+          "@value": "Inclusion numérique",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "concept:cat-public-space",
+      "@type": "Code",
+      "skos:prefLabel": [
+        {
+          "@value": "Public digital space",
+          "@language": "en"
+        },
+        {
+          "@value": "Espace public numérique",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "concept:cat-training",
+      "@type": "Code",
+      "skos:prefLabel": [
+        {
+          "@value": "Training",
+          "@language": "en"
+        },
+        {
+          "@value": "Formation",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "concept:consent-given",
+      "@type": "Code",
+      "skos:prefLabel": {
+        "@value": "Consent given",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "concept:dept-communication",
+      "@type": "Code",
+      "skos:prefLabel": {
+        "@value": "Communication",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "concept:dept-operations",
+      "@type": "Code",
+      "skos:prefLabel": [
+        {
+          "@value": "Operations",
+          "@language": "en"
+        },
+        {
+          "@value": "Opérations",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "concept:eur",
+      "@type": "Code",
+      "notation": [
+        "EUR"
+      ],
+      "skos:prefLabel": {
+        "@value": "Euro",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "concept:europe",
+      "@type": "Code",
+      "skos:prefLabel": [
+        {
+          "@value": "Europe",
+          "@language": "en"
+        },
+        {
+          "@value": "Europe",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "concept:gender-female",
+      "@type": "Code",
+      "skos:prefLabel": [
+        {
+          "@value": "Female",
+          "@language": "en"
+        },
+        {
+          "@value": "Féminin",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "concept:gender-male",
+      "@type": "Code",
+      "skos:prefLabel": [
+        {
+          "@value": "Male",
+          "@language": "en"
+        },
+        {
+          "@value": "Masculin",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "concept:lang-en",
+      "@type": "Code",
+      "notation": [
+        "en"
+      ],
+      "skos:prefLabel": [
+        {
+          "@value": "English",
+          "@language": "en"
+        },
+        {
+          "@value": "Anglais",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "concept:lang-fr",
+      "@type": "Code",
+      "notation": [
+        "fr"
+      ],
+      "skos:prefLabel": [
+        {
+          "@value": "French",
+          "@language": "en"
+        },
+        {
+          "@value": "Français",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "concept:nace-85599",
+      "@type": "Code",
+      "notation": [
+        "85.599"
+      ],
+      "skos:prefLabel": {
+        "@value": "Other education n.e.c.",
+        "@language": "en"
+      }
+    },
+    {
+      "@id": "concept:org-nonprofit",
+      "@type": "Code",
+      "skos:prefLabel": [
+        {
+          "@value": "Non-profit association (ASBL)",
+          "@language": "en"
+        },
+        {
+          "@value": "ASBL",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "concept:role-coordinator",
+      "@type": "Code",
+      "skos:prefLabel": [
+        {
+          "@value": "Coordinator",
+          "@language": "en"
+        },
+        {
+          "@value": "Coordinateur",
+          "@language": "fr"
+        }
+      ]
+    },
+    {
+      "@id": "concept:role-partner",
+      "@type": "Code",
+      "skos:prefLabel": [
+        {
+          "@value": "Partner",
+          "@language": "en"
+        },
+        {
+          "@value": "Partenaire",
+          "@language": "fr"
+        }
+      ]
+    }
+  ]
+}
