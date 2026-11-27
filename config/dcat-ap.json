@@ -1,0 +1,30 @@
+[
+{
+  "name": "dcat-ap",
+  "type": "ap",
+  "eap": "DCAT-AP.eap",
+  "diagram": "DCAT-AP",
+  "publication-state": "https://www.w3.org/2021/Process-20211102/#RecsW3C",
+  "publication-date": "2025-07-10",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "contributors-file": "stakeholders.csv",
+  "contributors-column": "DCAT-AP",
+  "site": "site-skeleton/dcat-ap",
+  "feedbackurl": "https://github.com/SEMICeu/DCAT-AP/issues",
+  "standaardregisterurl": "https://semiceu.github.io/DCAT-AP/releases/3.0.1/CHANGELOG.html",
+  "translation": [
+    {
+      "language":"en",
+      "template":"dcat-ap.j2",
+      "title": "DCAT-AP 3.0.1",
+      "translationjson":"dcat-ap_en.json",
+      "mergefile":"dcat-ap_en_merged.jsonld"
+    }
+  ],
+  "toolchainversion" : "3",
+  "documentconfig": {
+	  "editorDocumentroot" : "https://semiceu.github.io/DCAT-AP/releases/3.0.1",
+	  "statuslabel" : "SEMIC Draft Specification"
+  }
+}
+]

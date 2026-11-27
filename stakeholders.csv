@@ -1,9 +1,87 @@
-Voornaam;Naam;Affiliatie;E-mail;Website;D4WTA-AP
-Core Vocabularies Working Group;;;;;
-Thomas;Bouteille;Agence du Numérique;;;E
-Nicolas;Carra;Agence du Numérique;;;E
-Christelle;Darville;Agence du Numérique;;;E
-Philippe;Pisetta;Agence du Numérique;;;E
-Emidio;Stani;PwC EU Services;;;E
-Camille;Struckmeyer;Wallonie Entreprendre;;;E
-s;;;;;
+Voornaam;Naam;Affiliatie;E-mail;Website;D4WTA-AP;DCAT-AP
+Core Vocabularies Working Group;;;;;;
+Thomas;Bouteille;Agence du Numérique;;;E;
+Nicolas;Carra;Agence du Numérique;;;E;
+Christelle;Darville;Agence du Numérique;;;E;
+Philippe;Pisetta;Agence du Numérique;;;E;
+Emidio;Stani;PwC EU Services;;;E;
+Camille;Struckmeyer;Wallonie Entreprendre;;;E;
+Adina;Dragan;;;;;C
+Agnieszka;Jasiczek;;;;;C
+Agnieszka;Zajac;;;;;C
+Ana Alice;Baptista;;;;;C
+Anastasia;Sofou;EC External;;;;E
+Anastasija;Nikiforova;;;;;C
+Andrea;Perego;;;;;C
+Andreas;Kuckartz;;;;;C
+Anja;Loddenkemper;;;;;C
+Anssi;Ahlberg;;;;;C
+Arthur;Schiltz;PwC EU Services;;;;C
+Bart;Hanssens;;;;;C
+Bert;Van Nuffelen;;;;;C
+Bert;Van Nuffelen;Digitaal Vlaanderen;bert.vannuffelen@vlaanderen.be;;;A
+Casper;Gras;;;;;C
+Christian;Wittig;;;;;C
+Christine;Laaboudi-Spoiden;;;;;C
+Christoph;Lange;;;;;C
+Daniele;Rizzi;;;;;C
+Dietmar;Gattwinkel;;;;;C
+Emidio;Stani;;;;;C
+Emiel;Dhondt;;;;;E
+Fabian;Kirstein;;;;;C
+Fabian;Santi;;;;;C
+Frederik;Nordlander;;;;;C
+Geraldine;Nolf;;;;;C
+Giampaolo;Sellitto;;;;;C
+Giorgia;Lodi;;;;;C
+Hagar;Lowenthal;;;;;C
+Igor;Stefelin;;;;;C
+Ine;De Visser;;;;;C
+Jakub;Klímek;;;;;E
+Jan;Hjelmager ;;;;;C
+Jean;Delahousse;;;;;C
+Jim;Yang;;;;;C
+Jitse;De Cock;PwC EU Services;;;;E
+Joeri;van der Velde;;;;;C
+Jordi;Escriu ;;;;;C
+Kees;Trautwein;;;;;C
+Kristine;Ulander;;;;;C
+Kuldar;Aasaga;;;;;C
+Lina;Molinas Comet;;;;;C
+Ludger;Rinsche;;;;;C
+Luis;Daniel Ibáñez;;;;;C
+Maik;Roth;;;;;C
+Makx;Dekkers;;;;;C
+Martin;Alvarez-Espinar;;;;;C
+Matej;Alic;;;;;C
+Matthias;Grönewald;;;;;C
+Matthias;Palmer;;;;;C
+Maxime;Servais;;;;;C
+Michele;Spichtig;;;;;C
+Miguel;Alvarez;;;;;C
+Nataliia;Kovalchuk;;;;;C
+Niels;Hoffmann;;;;;C
+Oystein;Asnes;;;;;C
+Pavlina;Fragkou;OP;;;;E
+Pavlina;Fragkou;OP;;;;O
+Peter;Burian;;;;;C
+Peter;Lubrich;;;;;C
+Petros;Likidis;;;;;C
+Robert;Hiber ;;;;;C
+SEMIC;;;;;;O
+Sander;Van Dooren;;;;;C
+Sebastian;Sklarß;;;;;C
+Stefano;Ambrogio;;;;;C
+Stijn;Goedertier;;;;;C
+Suzanne;Wigard;;;;;C
+Taavi;Ploompuu;;;;;C
+Terje;Sylvarnes ;;;;;C
+Thomas;Tursics;;;;;C
+Thomas;Weber;;;;;C
+Ulrika;Domellöf Mattsson;;;;;C
+Vincent;Bombaerts;;;;;C
+William;Verbeeck;;;;;C
+Øystein;Åsnes;;;;;C
+Joachim;Niedlandt;;;;;C
+D;Porteles;;;;;C
+Fabian;Kirstein;;;;;C
